@@ -1,0 +1,84 @@
+@use '../../../scss/variables';
+
+aside {
+
+    .open {
+        display: block;
+    }
+    .close {
+        display: none;
+    }
+    &.recent-aside-container {
+        position: sticky;
+        top: 4rem;
+        padding: 0.5em 0.5em;
+        .recent-container {
+            color: variables.$item-text-color;
+            font-size: 0.75em;
+
+
+            .discover-more {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding: 0.75rem 0.75rem;
+                font-size: 1rem;
+                border-top: variables.$border-color;
+                margin-top: 0.5rem;
+                font-weight: 600;
+
+                &:hover {
+                    background-color: variables.$hover-bg-color;
+                }
+                a {
+                    color: variables.$item-text-color;
+                }
+            }
+            .heading {
+                &:not(:first-of-type) {
+                    margin-top: 0.75rem;
+                    > span:not(.collapse) {
+                        color: variables.$main-color;
+                        font-weight: 500;
+                    }
+                }
+                font-weight: 300;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                // padding-right: 0.5em;
+
+                span.collapse {
+                    cursor: pointer;
+                    padding: 0.4em 0.6em;
+                    border-radius: 50%;
+                    transition: background-color 200ms ease-in-out;
+                    &:hover {
+                        background-color: rgba(0,0,0, 0.1);
+                    }
+                }
+            }
+            .listing {
+                font-weight: 600;
+                transition: display 200ms ease-in-out;
+
+                ul {
+                    li {
+                        display: flex;
+                        align-items: center;
+                        padding: 0.35rem 0;
+                        cursor: pointer;
+                        &:hover {
+                            background-color: variables.$hover-bg-color;
+                        }
+                        span {
+                            padding-left: 0.25em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

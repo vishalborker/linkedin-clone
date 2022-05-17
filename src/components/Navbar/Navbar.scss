@@ -1,0 +1,116 @@
+@use '../../scss/_variables.scss';
+@use '../../scss/_allmixin.scss';
+
+nav {
+    &.navigation {
+        @include allmixin.flex-container-row;
+        @include allmixin.flex-center;
+        position: fixed;
+        background: variables.$item-bg-color;
+        width: 100%;
+        height: 3.5rem;
+        border: 1px solid rgba(0,0,0, 0.12);
+        padding: 0 4rem;
+        z-index: 1;
+    }
+
+    .logo-search-container {
+        @include allmixin.flex-container-row;
+        @include allmixin.flex-center;
+
+
+        .search-container {
+            @include allmixin.flex-container-row;
+            @include allmixin.flex-center;
+            background: variables.$navlink-search-bg-color;
+            color: variables.$navlink-search-text-color;
+            margin-left: 1rem;
+            padding: 0.5em 1rem;
+            border-radius: 4px;
+
+            input[type="text"] {
+                background: variables.$navlink-search-bg-color;
+                color: variables.$navlink-search-text-color;
+                font-size: 0.85rem;
+                border: none;
+                outline: 1px solid variables.$navlink-search-bg-color;
+                width: 14rem;
+                transition: width 300ms ease-in-out, font-size 300ms ease-in-out;
+                padding-left: 0.5rem;
+
+                &:focus {
+                    width: 18em;
+                    font-size: 1rem;
+                }
+            }
+
+            .search-bar {
+                font-size: 0.75em;
+                color: rgba(0,0,0, 0.6);
+            }
+        }
+    }
+
+    .nav-links {
+        height: 100%;
+        display: flex;
+        ul {
+            margin: 0;
+            padding: 0;
+            @include allmixin.flex-container-row;
+        }
+    }
+    
+    ul li {
+        list-style: none;
+        // padding: 0 1em;
+        min-width: 5em;
+        height: 100%;
+        @include allmixin.flex-container-row;
+        @include allmixin.flex-center;
+
+        a {
+            @include allmixin.flex-container-col;
+            @include allmixin.flex-center;
+
+            height: 100%;
+            justify-content: center;
+            min-width: 5em;
+            text-decoration: none;
+            color: rgba(0,0,0, 0.5);
+            transition: color 100ms ease-in-out, font-weight 100ms ease-in-out;
+
+            &:hover, &.active {
+                color: rgba(0,0,0, 1);
+                font-weight: 400;
+            }
+
+            &.active {
+                border-bottom: 2px solid black;
+            }
+            
+            span.link-name {
+                font-size: 0.75rem;
+                span {
+                    margin-right: 0.125rem;
+                }
+            }
+            & > svg {
+                font-size: 1.25rem;
+            }
+        }
+
+    }
+
+    img.profile-image {
+        height: 22px;
+        width: 22px;
+        border-radius: 50%;
+    }
+
+    img.work-image {
+        height: 22px;
+        width: 22px;
+    }
+}
+

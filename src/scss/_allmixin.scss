@@ -1,0 +1,25 @@
+@use './variables';
+
+@mixin flex-container-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-center {
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-container-col {
+    display: flex;
+    flex-direction: column;
+}
+
+
+@mixin button {
+    color: white;
+    background-color: variables.$main-color;
+    border: none;
+    font-size: 1em;
+    padding: 1em 0;
+}

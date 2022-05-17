@@ -1,0 +1,168 @@
+@use '../../../scss/variables';
+@use '../../../scss/allmixin';
+
+$borderBottomProfile: 1px solid rgba(0, 0, 0, 0.08);
+$hoverBgColor: rgba(0, 0, 0, 0.12);
+
+$font-color: rgba(0,0,0, 0.6);
+
+aside {
+    background: white;
+    border-radius: 6px;
+    position: relative;
+    margin-bottom: 1em;
+
+    &.profile-info-container {
+        max-width: 250px;
+        .my-items {
+            @include allmixin.flex-container-row;
+            padding: 0.75em 0.65rem;
+            cursor: pointer;
+
+            a {
+                &.my-items-a {
+                    @include allmixin.flex-container-row;
+                    align-items: center;
+                    svg, span {
+                        color: $font-color;
+                        font-size: 0.75rem;
+                        font-weight: 500;
+                        margin-left: 0.1rem;
+                    }
+                }
+                width: 100%;
+                span {
+                    color: $font-color;
+                    font-size: 0.75rem;
+                    font-weight: 500;
+                    margin-left: 0.1rem;
+                }
+                
+            }
+            &:hover {
+                background-color: $hoverBgColor;
+            }
+        }
+        .reactivate-premium-container {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            place-items: flex-start;
+            align-items: flex-start;
+            font-size: 0.75em;
+            padding: 0.75rem 0.75rem;
+            border-bottom: $borderBottomProfile;
+
+            &:hover {
+                background-color: $hoverBgColor;
+            }
+
+            a.reactivate-premium {
+                @include allmixin.flex-container-row;
+                align-items: center;
+
+                img {
+                    height: 15px;
+                    width: 15px;
+                }
+
+                span {
+                    color: rgba(0,0,0, 0.8); 
+                    font-weight: 600;
+
+                    &:hover {
+                        color: variables.$main-color;
+                    }
+                }
+            }
+        }
+        .view-info {
+            padding: 0;
+            border-bottom: $borderBottomProfile;
+            ul {
+                li {
+                    padding-top: 0.75rem;
+                    &:last-of-type {
+                        padding-bottom: 0.75rem;
+                    }
+                    a {
+                        @include allmixin.flex-container-row;
+                        justify-content: space-between;
+                        padding: 0 0.5rem;
+                        align-items: flex-start;
+                        padding: 0.25em 0.65rem;
+
+                        span {
+                            color: $font-color;
+                            font-size: 0.75rem;
+                            font-weight: 500;
+
+                            &:last-of-type {
+                                color: variables.$main-color;
+                            }
+                        }
+
+                        &:hover {
+                            background-color: $hoverBgColor;
+                        }  
+                    }
+
+                    
+                }
+            }
+        }
+
+        .user-info {
+            padding-bottom: 1.5rem;
+            border-bottom: $borderBottomProfile;
+            .profile-img {
+                img {
+                    height: 70px;
+                    width: 65px;
+                    position: absolute;
+                    top: 7%;
+                    left: 33%;
+                    border-radius: 50%;
+                    border: 2px solid white;
+                }
+            }
+            .bg-img {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+
+                img {
+                    height: 60px;
+                    width: 100%;
+                    border-radius: 6px 6px 0 0;
+                    
+                }
+            }
+        }
+
+        .user-professional-info {
+            padding-top: 5rem;
+            text-align: center;
+
+            h3.heading {
+                margin: 2rem 0 0.5rem 0;
+                font-size: 1rem;
+                font-weight: 600;
+                
+                a {
+                    color: rgba(0,0,0, 0.8); 
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .sub-heading {
+                font-size: 0.75rem;
+                color: rgba(0,0,0, 0.5);
+                font-weight: 400;
+                padding: 0 1rem;
+            }
+        }
+    }
+}

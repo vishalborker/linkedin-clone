@@ -1,0 +1,95 @@
+@use '../../../scss/allmixin';
+@use '../../../scss/variables';
+
+$font-color: rgba(0, 0, 0, 0.9);
+$light-font-color: rgba(0, 0, 0, 0.6);
+
+aside {
+    &.news {
+        padding: 0.5rem;
+
+        button {
+            margin-top: 0.5rem;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            color: rgba(0,0,0, 0.6);
+            font-weight: 500;
+            font-size: 0.9rem;
+            align-items: center;
+            padding: 0.5rem 0.25rem 0.25rem;
+            background-color: white;
+            border-radius: 6px;
+
+            &:hover {
+                background-color: rgba(0,0,0, 0.2);
+            }
+
+            .show-more {
+                margin-right: 0.25rem;
+            }
+        }
+        .news-container {
+            ul {
+                li {
+                    transition: .25s ease-in-out;
+                    &:hover {
+                        background-color: variables.$hover-bg-color;
+                    }
+                    margin-top: 0.5rem;
+                    a {
+                        display: flex;
+                        align-items: baseline;
+                        > span {
+                            display: flex;
+                            flex-direction: column;
+                            font-size: 0.4rem;
+                            color: rgba(0,0,0,0.6);
+                            margin-right: 0.25rem;
+                        }
+
+                        span.news-header {
+                            font-size: 0.85rem;
+                            font-weight: 600;
+                            color: $font-color;
+                        }
+
+                        span.more-info {
+                            font-size: 0.75rem;
+                            font-weight: 400;
+                            color: $light-font-color;
+                            margin-top: 0.25rem;
+
+                            span {
+                                margin-right: 0.1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        .header-container {
+            @include allmixin.flex-container-row;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+
+            .linkedin-news-header {
+                font-size: 1rem;
+                font-weight: 600;
+            }
+            img {
+                cursor: pointer;
+            }
+        }
+
+        span.link-bullet {
+            border-radius: 50%;
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            margin: 0 0.5rem 0 0;
+            border: 3px solid rgba(0, 0, 0, 0.6);
+        }
+    } 
+}

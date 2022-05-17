@@ -1,0 +1,19 @@
+@use '../../scss/variables';
+
+main.feed-page {
+    padding: 5rem 4rem;
+    background-color: variables.$main-bg;
+    min-height: 100vh;
+}
+
+section.left-pane {
+    width: 20%
+}
+
+section.middle-pane {
+    width: 50%;
+}
+
+section.right-pane {
+    width: 25%;
+}

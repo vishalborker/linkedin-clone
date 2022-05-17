@@ -1,0 +1,10 @@
+@use '../../scss/_allmixin.scss';
+
+main.feed-page {
+    @include allmixin.flex-container-row;
+    justify-content: space-between;
+}
+
+.main-feed {
+    margin-top: 1rem;
+}

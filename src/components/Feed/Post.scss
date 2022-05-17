@@ -1,0 +1,51 @@
+@use '../../scss/allmixin';
+@use '../../scss/variables';
+
+.content-container {
+    @include allmixin.flex-container-col;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    justify-content: center;
+    margin-bottom: 1rem;
+    .creator {
+        @include allmixin.flex-container-row;
+
+        .creator-details {
+            .creator-title {
+                @include allmixin.flex-container-row;
+                align-items: center;
+                
+                h5 {
+                    margin: 0;
+                    font-size: 0.9rem;
+                    color: rgba(0,0,0,0.9);
+                    font-weight: 600;
+                }
+
+                span.following {
+                    margin: 0;
+                }
+            }
+        }
+
+        .profile {
+            margin-right: 0.5rem;
+            img {
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+            }
+
+
+        }
+    }
+
+    .post-content-container {
+
+    }
+
+    .engagements-container {
+
+    }
+}
