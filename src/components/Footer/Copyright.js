@@ -4,8 +4,8 @@ import './Copyright.scss';
 
 function Copyright() {
   return (
-    <footer className='login-copyright'>
-      Copyright!! content
+    <footer className='login-footer'>
+      {/* Copyright!! content */}
     </footer>
   )
 }

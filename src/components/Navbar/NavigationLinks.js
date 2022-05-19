@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { NavLink } from 'react-router-dom';
 import { IMAGES } from '../../constants/images';
+import { useSelector } from 'react-redux';
 
 function NavigationLinks({ links }) {
+  const user = useSelector(state => state.user.user);
+  const [showProfileDropdown, setShowProfileDropdown] = useState(false);
   return (
     <div className='nav-links'>
         <ul>
@@ -22,14 +25,20 @@ function NavigationLinks({ links }) {
             })
         }
 
-            <li>
+            <li onMouseEnter={() => setShowProfileDropdown(true)}
+                onMouseLeave={() => setShowProfileDropdown(false)}
+            >
                 <NavLink to={'/profile'} key='Me'>
-                <img src={IMAGES.USER_AVATAR} alt="User Profile" className='profile-image' />
+                <img src={user.profileImg} alt="User Profile" className='profile-image' />
                 <span className='link-name'>
                     <span>Me</span>
                     <FontAwesomeIcon icon={faCaretDown} />
                 </span>
                 </NavLink>
+
+                <ul className={`profile-dropdown ${showProfileDropdown ? 'show' : 'hide'}`}>
+                    <li>Logout</li>
+                </ul>
             </li>
 
             <li>

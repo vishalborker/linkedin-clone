@@ -12,7 +12,7 @@ function Feed() {
 
   const memoizedArray = useMemo(() => {
     const arr = [];
-    for(let i = 0; i< 2; i++)
+    for(let i = 0; i< 50; i++)
       arr.push(i);
     return arr;
   }, []);

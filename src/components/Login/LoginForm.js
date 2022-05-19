@@ -1,32 +1,31 @@
-import React, { useCallback, useState } from 'react'
+import React, { useCallback, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { NavLink, useNavigate } from 'react-router-dom';
 
 import { KEYS } from '../../constants/localStorage';
-
+import { LOGIN_USER } from '../../constants/user';
 import useLocalStorage from '../../hooks/useLocalStorage';
+
 import Loader from '../helper/Loader';
 import LoginHeader from './LoginHeader';
 
 function LoginForm() {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const [ password, setPassword ] = useState(LOGIN_USER.password);
+  const [ email, setEmail ] = useState(LOGIN_USER.email);
+  const [ loading, setLoading ] = useState(false);
+  
+  const setLogin = useCallback(() => dispatch({ type: 'setLogin' }), [dispatch]);
+
+  const [ , setLoginLocal ] = useLocalStorage(KEYS.LOGIN);
+  const [ , setEmailLocal ] = useLocalStorage(KEYS.EMAIL);
+
   const formTitle = 'Sign in';
   const formSubTitle = 'Stay updated on your professional world';
 
-  const [ password, setPassword ] = useState('v123');
-  const [ email, setEmail ] = useState('v123@gmail.com');
-
-  const navigate = useNavigate();
-  
-  const [ loginLocal, setLoginLocal ] = useLocalStorage(KEYS.LOGIN);
-  const [ userLocal, setUserLocal ] = useLocalStorage(KEYS.USER);
-  const [ loading, setLoading ] = useState(false);
-
-  const dispatch = useDispatch();
-  const setLogin = useCallback(() => dispatch({ type: 'setLogin' }), [dispatch]);
-  const setUser = useCallback((data) => dispatch({ type: 'setUser', payload: data }), [dispatch]);
-
   const loginSubmit = (e) => {
-    
     e.preventDefault();
     setLoading(true);
 
@@ -37,11 +36,10 @@ function LoginForm() {
   
     // set Login and User in LocalStorage
     setLoginLocal(true);
-    setUserLocal(reqBody);
+    setEmailLocal(reqBody.email);
 
     // set login and user in redux-store
     setLogin();
-    setUser(reqBody);
 
     setTimeout(() => {
       navigate('/feed');
@@ -52,7 +50,7 @@ function LoginForm() {
   return (
     <section className='login-section'>
       <div className="login-container">
-        <LoginHeader formTitle={ formTitle } formSubTitle={ formSubTitle }/>
+          <LoginHeader formTitle={ formTitle } formSubTitle={ formSubTitle }/>
           <form className='login-form' onSubmit={(e) => loginSubmit(e)}>
             <div className='input-container'>
               <input 
@@ -95,4 +93,4 @@ function LoginForm() {
   )
 }
 
-export default LoginForm
+export default LoginForm;

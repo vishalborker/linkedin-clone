@@ -2,16 +2,46 @@
 @use '../../scss/variables';
 
 .content-container {
+    
+    span.separator {
+        margin: 0 0.25rem;
+        color: rgba(0,0,0,0.6);
+    }
     @include allmixin.flex-container-col;
     background-color: white;
-    padding: 1rem;
+    padding: 1rem 1rem 0.25rem 1rem;
     border-radius: 8px;
     justify-content: center;
     margin-bottom: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+
     .creator {
         @include allmixin.flex-container-row;
 
         .creator-details {
+            .creator-subtitle {
+                span.following {
+                    display: inline-block;
+                    text-overflow: ellipsis;
+                    overflow: hidden; 
+                    white-space: nowrap;
+                    font-size: 0.85rem;
+                    color: rgba(0,0,0,0.6);
+                    width: 400px;
+                }
+            }
+
+            .timeline {
+                display: flex;
+                font-size: 0.8rem;
+                font-weight: 400;
+                color: rgba(0,0,0,0.6);
+
+                span.privacy {
+                    display: flex;
+                    align-items: center;
+                }
+            }
             .creator-title {
                 @include allmixin.flex-container-row;
                 align-items: center;
@@ -25,27 +55,113 @@
 
                 span.following {
                     margin: 0;
+                    font-size: 0.85rem;
+                    color: rgba(0,0,0,0.6);
+
+                }
+                span.separator {
+                    margin: 0 0.25rem;
+                    color: rgba(0,0,0,0.6);
                 }
             }
         }
 
         .profile {
+            display: flex;
+            align-items: center;
             margin-right: 0.5rem;
             img {
                 height: 50px;
                 width: 50px;
                 border-radius: 50%;
             }
-
-
         }
     }
 
     .post-content-container {
-
+        padding: 0 0.5rem;
+        p.post-content {
+            white-space: pre-line;
+            font-size: 0.9rem;
+            color: rgba(0,0,0, 0.8);
+        }
     }
 
     .engagements-container {
+        .engagements {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            font-size: 0.7rem;
+            font-weight: 400;
+            align-items: center;
+            color: rgba(0,0,0,0.6);
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            padding: 0.5rem;
 
+            .like-support-love {
+                span {
+                    margin-right: 0.25rem;
+                    vertical-align: -webkit-baseline-middle;
+                    img {
+                        border: 1px solid white;
+                        border-radius: 50%;
+                    }
+                    img:nth-child(1) {
+                        z-index: 1;
+                    }
+
+                    img:nth-child(2) {
+                       z-index: 2;
+                       margin-left: -6px;
+                    }
+
+                    img:nth-child(3) {
+                       z-index: 3;
+                       margin-left: -6px;
+                    }
+                }
+
+                span:last-of-type {
+                    vertical-align: middle;
+                }
+            }
+        }
+
+        .button-container {
+            display: flex;
+            padding: 0.2rem 0.5rem 0 0.5rem;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            button {
+                
+                cursor: pointer;
+                background-color: white;
+                @include allmixin.flex-container-row;
+                align-items: center;
+                border: none;
+                padding: 1rem 0;
+                border-radius: 4px;
+                width: 100%;
+                justify-content: center;
+
+                img {
+                    margin-right: 0.25rem;
+                    width: 25px;
+                    height: 25px;
+                }
+                &:hover {
+                    background-color: variables.$hover-bg-color;
+                }
+
+                span {
+                    font-size: 0.9rem;
+                    font-weight: 600;
+                    color:rgba(0, 0, 0, 0.5)
+                }
+            }
+        }
     }
 }

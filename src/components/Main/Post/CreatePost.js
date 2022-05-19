@@ -1,13 +1,15 @@
 import React from 'react'
+import { useSelector } from 'react-redux';
 import { IMAGES } from '../../../constants/images'
 
 import './CreatePost.scss';
 
 function CreatePost() {
+  const user = useSelector(state => state.user.user);
   return (
     <div className='post-container'>
         <div className='create-container'>
-            <img className='profile-img' src={IMAGES.USER_AVATAR} alt='User Profile' />
+            <img className='profile-img' src={user.profileImg} alt='User Profile' />
             <button className='create-button'>Start a post</button>
         </div>
         <div className='options-container'>
@@ -28,7 +30,7 @@ function CreatePost() {
 
             <button className='item-container article-container'>
                 <img src={IMAGES.POST_ARTICLE} alt='Create Article Post' className='article-img'/>
-                <span>Article</span>
+                <span>Write Article</span>
             </button>
         </div>
     </div>

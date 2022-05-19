@@ -9,6 +9,7 @@ $font-color: rgba(0,0,0, 0.6);
     @include allmixin.flex-container-col;
     justify-content: space-between;
     padding: 0.75rem 1rem;
+    border: 1px solid rgba(0,0,0,0.2);
 
     .options-container {
         display: flex;
@@ -27,6 +28,8 @@ $font-color: rgba(0,0,0, 0.6);
                 border: none;
                 background-color: white;
                 transition: background-color 200ms ease-in-out;
+                font-weight: 600;
+                color: rgba(0,0,0,0.5);
                 &:hover {
                     background-color: variables.$hover-bg-color;
                 }
@@ -51,9 +54,9 @@ $font-color: rgba(0,0,0, 0.6);
             background-color: white;
             text-align: left;
             padding: 0 1em;
-            color: $font-color;
+            color: rgba(0,0,0,0.5);
             font-weight: 600;
-            font-size: 0.8em;
+            font-size: 0.85em;
             transition: background-color 100ms ease-in-out;
             &:hover {
                 background-color: rgba(0, 0, 0, 0.09)

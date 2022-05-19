@@ -25,6 +25,7 @@ import MainComment from '../images/main-comment.svg';
 import MainShare from '../images/main-share.svg';
 import MainSend from '../images/main-send.svg';
 
+import PrivacyPublic from '../images/privacy-public.svg';
 
 
 export const IMAGES = {
@@ -42,6 +43,7 @@ export const IMAGES = {
     POST_ARTICLE: PostArticle,
     MORE_INFO: moreInfo,
     GOOGLE: google,
+    PRIVACY_PUBLIC: PrivacyPublic,
 }
 
 export const ENGAGEMENTS = {

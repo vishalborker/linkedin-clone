@@ -1,9 +1,9 @@
 import React from 'react';
-import { ENGAGEMENTS } from '../../constants/images';
+import { ENGAGEMENTS, IMAGES } from '../../constants/images';
 
 import './Post.scss';
 
-function Post({ data}) {
+function Post({ data }) {
   return (
     <div className='content-container'>
         <div className='creator'>
@@ -17,37 +17,41 @@ function Post({ data}) {
                     <span className='following'>Following</span>
                 </div>
                 <div className='creator-subtitle'>
-                    <span className='following'>Aussie</span>
+                    <span className='following'>Follow me for system design & book-writing tips | Author of System Design Interval how are you there</span>
                 </div>
                 <div className='timeline'>
                     <span className='time-posted'>3d</span>
-                    <span className='seperator'>.</span>
-                    <span className='privacy'>Public</span>
+                    <span className='separator'>•</span>
+                    <span className='privacy'>
+                        <img src={IMAGES.PRIVACY_PUBLIC} alt='Public privacy' />
+                    </span>
                 </div>
             </div>
         </div>
         <div className='post-content-container'>
-            <p className='post-content' style={{'whiteSpace': 'pre-wrap'}}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. \n 
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, \n
+            <p className='post-content'>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                 when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                \n It has survived not only five centuries, 
-                \n but also the leap into electronic typesetting, remaining essentially unchanged.
+                It has survived not only five centuries, 
+                but also the leap into electronic typesetting, remaining essentially unchanged.
             </p>
         </div>
         <div className='engagements-container'>
-            <div className='like-support-love'>
-                <span>
-                    <img src={ENGAGEMENTS.Like} alt='Like' />
-                    <img src={ENGAGEMENTS.Love} alt='Love' />
-                    <img src={ENGAGEMENTS.Clap} alt='Clap' />
-                </span>
-                <span>Akshay Kumar and 1,013 others</span>
-            </div>
-            <div className='comment-share'>
-                <span className='comment'>309 comments</span>
-                <span className='seperator'>.</span>
-                <span className='shares'>25 shares</span>
+            <div className='engagements'>
+                <div className='like-support-love'>
+                    <span>
+                        <img src={ENGAGEMENTS.Like} alt='Like' />
+                        <img src={ENGAGEMENTS.Love} alt='Love' />
+                        <img src={ENGAGEMENTS.Clap} alt='Clap' />
+                    </span>
+                    <span>Akshay Kumar and 1,013 others</span>
+                </div>
+                <div className='comment-share'>
+                    <span className='comment'>309 comments</span>
+                    <span className='separator'>•</span>
+                    <span className='shares'>25 shares</span>
+                </div>
             </div>
 
             <div className='button-container'>

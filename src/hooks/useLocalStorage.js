@@ -6,8 +6,6 @@ function useLocalStorage(key, defaultValue) {
 
     try {
         currentValue = JSON.parse(localStorage.getItem(key));
-
-        console.log({currentValue});
     } catch(exception) {
         currentValue = defaultValue;
     }

@@ -18,6 +18,9 @@ nav {
         @include allmixin.flex-container-row;
         @include allmixin.flex-center;
 
+        img {
+            display: flex;
+        }
 
         .search-container {
             @include allmixin.flex-container-row;
@@ -69,6 +72,15 @@ nav {
         @include allmixin.flex-container-row;
         @include allmixin.flex-center;
 
+        ul.profile-dropdown {
+            position: absolute;
+            top: 101%;
+            background-color: white;
+            border-radius: 4px;
+            padding: 1rem;
+            font-size: 1rem;
+        }
+
         a {
             @include allmixin.flex-container-col;
             @include allmixin.flex-center;
@@ -112,5 +124,13 @@ nav {
         height: 22px;
         width: 22px;
     }
+}
+
+.profile-dropdown.show {
+    display: block;
+}
+
+.profile-dropdown.hide {
+    display: none;
 }
 

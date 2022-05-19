@@ -8,6 +8,8 @@ import { NoLoginRequired } from '../components/helper/NoLoginRequired';
 import { ProtectedRoute } from '../components/helper/ProtectedRoute';
 
 function MainRouter() {
+
+  console.log('Main Router rendered!');
   return (
     <BrowserRouter>
         <Routes>
