@@ -28,7 +28,7 @@ function ProfilePopUp({visitedLink}) {
     setTimeout(() => {
         resetStore();
         navigate('/login');
-    }, 2000);
+    }, 500);
   }
   return (
     <div className='profile-dropdown'>
