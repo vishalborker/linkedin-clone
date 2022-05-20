@@ -12,7 +12,6 @@ export const ProtectedRoute = ({
     children,
   }) => {
 
-    console.log('Rendered protected Route how many times??');
     const dispatch = useDispatch();
     const navigate = useNavigate();
 

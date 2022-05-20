@@ -23,7 +23,6 @@ function Home() {
   // setUser happens in Home
   const [ userData ] = useUser();
   //const userData = {}
-  console.log('Rendered home times');
 
   return (
     <ErrorBoundary>

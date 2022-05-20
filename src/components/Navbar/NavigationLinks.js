@@ -5,10 +5,12 @@ import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { NavLink } from 'react-router-dom';
 import { IMAGES } from '../../constants/images';
 import { useSelector } from 'react-redux';
+import ProfilePopUp from './ProfilePopUp';
 
 function NavigationLinks({ links }) {
   const user = useSelector(state => state.user.user);
   const [showProfileDropdown, setShowProfileDropdown] = useState(false);
+
   return (
     <div className='nav-links'>
         <ul>
@@ -25,20 +27,19 @@ function NavigationLinks({ links }) {
             })
         }
 
-            <li onMouseEnter={() => setShowProfileDropdown(true)}
-                onMouseLeave={() => setShowProfileDropdown(false)}
-            >
-                <NavLink to={'/profile'} key='Me'>
-                <img src={user.profileImg} alt="User Profile" className='profile-image' />
-                <span className='link-name'>
-                    <span>Me</span>
-                    <FontAwesomeIcon icon={faCaretDown} />
-                </span>
-                </NavLink>
+            <li>
+                <div className='profile-option' onClick={() => setShowProfileDropdown(show => !show)}>
+                    <img src={user.profileImg} alt="User Profile" className='profile-image' />
+                    <span className='link-name'>
+                        <span>Me</span>
+                        <FontAwesomeIcon icon={faCaretDown} />
+                    </span>
+                </div>
 
-                <ul className={`profile-dropdown ${showProfileDropdown ? 'show' : 'hide'}`}>
-                    <li>Logout</li>
-                </ul>
+                {
+                    !showProfileDropdown ? null : <ProfilePopUp visitedLink={() => setShowProfileDropdown(false)}/>
+                }
+                
             </li>
 
             <li>

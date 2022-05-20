@@ -13,7 +13,6 @@ function useUser() {
 
   // sets local user data
   useEffect(() => {
-    console.log({userData});
     if (userData)
       setUserLocal(userData);
   }, [setUserLocal, userData])

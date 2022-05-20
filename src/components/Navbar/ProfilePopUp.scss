@@ -1,0 +1,120 @@
+@use '../../scss/allmixin';
+@use '../../scss/variables';
+
+nav ul li {
+    div.profile-dropdown {
+        min-width: 275px;
+        position: absolute;
+        top: 103%;
+        right: 0;
+        background-color: white;
+        border-radius: 4px;
+        padding: 1rem;
+        font-size: 1rem;
+        box-shadow: 4px 4px 10px -4px rgba(0,0,0,0.2),
+        -4px 0px 10px -4px rgba(0,0,0,0.2)
+        ;
+        z-index: 1;
+        border: 1px solid rgba(0,0,0,.2);
+    
+        h3 {
+            margin: 0;
+            font-size: 1rem;
+            font-weight: 500;
+            color: rgba(0,0,0,0.9);
+        }
+
+        .container {
+            .profile {
+                border-bottom: 1px solid rgba(0,0,0,0.2);
+                padding-bottom: 1rem;
+
+                button {
+                    &.button.view-profile {
+                        color: variables.$main-color;
+                        font-weight: 500;
+                        padding: 0.25rem;
+                        width: 100%;
+                        margin-top: 1rem;
+                        border: 1px solid variables.$main-color;
+                        background-color: transparent;
+                        cursor: pointer;
+                        border-radius: 16px;
+
+                        &:hover {
+                            -webkit-box-shadow:inset 0px 0px 0px 10px variables.$main-color;
+                            -moz-box-shadow:inset 0px 0px 0px 10px variables.$main-color;
+                            box-shadow:inset 0px 0px 0px 2px variables.$main-color;
+                            background-color: transparent;
+                        }
+                    }
+                }
+                .info {
+
+                    span.subtitle {
+                        font-size: 0.75rem;
+                        color: rgba(0, 0, 0, 0.5);
+                        font-weight: 400;
+                    }
+                }
+                a {
+                    &.profile-details.active {
+                        border-bottom: none;
+                    }
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-start;
+                    img {
+                        height: 60px;
+                        height: 60px;
+                        border-radius: 50%;
+                        border: 1px solid white;
+                        margin-right: 0.25rem;
+                    }
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+    
+            .account, .manage, {
+                margin-top: 1rem;
+                border-bottom: 1px solid rgba(0,0,0,0.2);
+                padding-bottom: 1rem;
+                ul {
+                    display: flex;
+                    flex-direction: column;
+
+                    li {
+                        font-size: 0.8rem;
+                        margin-top: 0.5rem;
+                        a { 
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+
+            .signout {
+                ul {
+                    display: flex;
+                    flex-direction: column;
+
+                    li {
+                        color: rgba(0, 0, 0, 0.5);
+                        cursor: pointer;
+                        font-size: 0.8rem;
+                        margin-top: 0.5rem;
+
+                        &:hover {
+                            color: rgba(0,0,0, 1);
+                            font-weight: 400;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}  

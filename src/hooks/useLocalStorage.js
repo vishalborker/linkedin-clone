@@ -13,15 +13,9 @@ function useLocalStorage(key, defaultValue) {
     return currentValue;
   });
 
-  const notEmpty = (value) => {
-    return value !== 'undefined' && value !== undefined && value !== null && value !== 'null';
-  }
-
   useEffect(() => {
-    if (notEmpty(value)) {
-      localStorage.setItem(key, JSON.stringify(value));
-    } 
-  }, [value, key]);
+    localStorage.setItem(key, JSON.stringify(value));
+  }, [value, key, setValue]);
 
   return [ value, setValue ];
 }

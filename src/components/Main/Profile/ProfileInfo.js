@@ -10,7 +10,6 @@ import './Profile.scss';
 
 
 function ProfileInfo({user}) {
-  console.log(user);
   return (
     <aside className="profile-info-container">
       <div className='user-info'>
