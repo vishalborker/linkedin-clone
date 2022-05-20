@@ -6,6 +6,7 @@ import Home from '../components/Main/Home';
 
 import { NoLoginRequired } from '../components/helper/NoLoginRequired';
 import { ProtectedRoute } from '../components/helper/ProtectedRoute';
+// import Notifications from '../components/Notifications/Notifications';
 
 function MainRouter() {
   return (
@@ -18,6 +19,13 @@ function MainRouter() {
                 </ProtectedRoute>
             }>
             </Route>
+
+            {/* <Route path="/notifications" element= {
+                <ProtectedRoute>                
+                    <Notifications />
+                </ProtectedRoute>
+            }></Route> */}
+
             
             <Route path="/login" element = {
                 <NoLoginRequired>

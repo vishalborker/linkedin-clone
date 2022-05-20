@@ -11,7 +11,7 @@ function Search() {
         </div>
         <input 
             type='text' 
-            placeholder='Search for Jobs, companies..'
+            placeholder='Search...'
         />
     </div>
   )

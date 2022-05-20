@@ -1,12 +1,14 @@
 import React, { useCallback, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { NavLink, useNavigate } from 'react-router-dom';
+import { IMAGES } from '../../constants/images';
 
 import { KEYS } from '../../constants/localStorage';
 import { LOGIN_USER } from '../../constants/user';
 import useLocalStorage from '../../hooks/useLocalStorage';
 
 import Loader from '../helper/Loader';
+import OrSeparator from '../helper/OrSeparator';
 import LoginHeader from './LoginHeader';
 
 function LoginForm() {
@@ -85,9 +87,16 @@ function LoginForm() {
             </NavLink>
             <button type='submit' className={loading ? 'disabled' : ''}>
               Sign in
-              { loading ? <Loader /> : null }
+              { loading ? <Loader simple={true} /> : null }
             </button>
           </form>
+          <OrSeparator />
+
+          <button type='button' className={loading ? 'disabled' : ''}>
+              <img src={IMAGES.SIGN_IN_APPLE} alt='sign in apple' />
+              Sign in with Apple
+          </button>
+
       </div>
     </section>
   )

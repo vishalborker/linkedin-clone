@@ -26,6 +26,7 @@ import MainShare from '../images/main-share.svg';
 import MainSend from '../images/main-send.svg';
 
 import PrivacyPublic from '../images/privacy-public.svg';
+import SignInApple from '../images/sign-in-apple.svg';
 
 
 export const IMAGES = {
@@ -44,6 +45,7 @@ export const IMAGES = {
     MORE_INFO: moreInfo,
     GOOGLE: google,
     PRIVACY_PUBLIC: PrivacyPublic,
+    SIGN_IN_APPLE: SignInApple
 }
 
 export const ENGAGEMENTS = {

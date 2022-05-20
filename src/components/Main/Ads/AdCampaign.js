@@ -24,7 +24,7 @@ function AdCampaign() {
             <img src={IMAGES.GOOGLE} alt='' />
           </div>
           <div className='sub-title'>
-            Vishal, explore jobs at <em><b>Google</b></em> that match your skills
+            {user.username}, explore jobs at <em><b>Google</b></em> that match your skills
           </div>
           <button className='see-jobs'>See jobs</button>
         </div>        

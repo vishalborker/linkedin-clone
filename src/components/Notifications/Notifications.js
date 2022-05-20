@@ -3,7 +3,7 @@ import React from 'react'
 function Notifications() {
   return (
     <section className='notifications'>
-      Notifications
+      Coming Soon!!!
     </section>
   )
 }

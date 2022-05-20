@@ -12,7 +12,7 @@ function Login() {
     <main className='login-main'>
         <LoginNav />
         <LoginForm />
-        {/* <JoinNow /> */}
+        <JoinNow />
         <LoginCopyright />
     </main>
   )

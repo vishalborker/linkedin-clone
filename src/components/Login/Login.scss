@@ -2,7 +2,7 @@
 @use '../../scss/_variables.scss';
 
 main.login-main {
-    padding: 3em;
+    padding: 2em 3rem;
 }
 
 main.main {
@@ -20,24 +20,67 @@ main.main {
 }
 
 .login-container {
+
+    button[type="button"] {
+        @include allmixin.flex-container-row;
+        justify-content: center;
+        align-items: center;
+
+        cursor: pointer;
+
+        border: 1px solid rgba(0,0,0,0.7);
+
+        font-weight: 600;
+        font-size: 1rem;
+
+        padding: 0.5em 0;
+        margin: 1em 0;
+
+        border-radius: 25px;
+        color: rgba(0,0,0,0.6);
+        background-color: white;
+        
+        transition: box-shadow 200ms ease-in-out;
+
+        &:hover {
+            background-color: rgba(0,0,0,0.1);
+            -webkit-box-shadow:inset 0px 0px 0px 10px variables.$main-color;
+            -moz-box-shadow:inset 0px 0px 0px 10px variables.$main-color;
+            box-shadow:inset 0px 0px 0px 2px rgba(0,0,0,0.8);
+        }
+
+        &.disabled {
+            cursor: not-allowed;
+        }
+    }
+
     @include allmixin.flex-container-col;
 
     background: white;
     border-radius: 8px;
     padding: 1em 1.5em;
     box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
+    min-width: 350px;
 
     a {
         text-decoration: none;
     }
 
+    .subtitle {
+        color: rgba(0, 0, 0, 0.7);
+        font-weight: 400;
+        font-size: 0.8rem;
+    }
     header h1 {
         margin: 0.5em 0;
 
-        .title {
-            font-size: 2em;
-            font-weight: 600;
+        &.title {
+            font-size: 2rem;
+            font-weight: 500;
+            margin: 0.5rem 0;
         }
+
+        
     }
 
     .login-form {
