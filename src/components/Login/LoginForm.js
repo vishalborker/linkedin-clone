@@ -1,14 +1,13 @@
 import React, { useCallback, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { IMAGES } from '../../constants/images';
 
 import { KEYS } from '../../constants/localStorage';
 import { LOGIN_USER } from '../../constants/user';
 import useLocalStorage from '../../hooks/useLocalStorage';
 
 import Loader from '../helper/Loader';
-import OrSeparator from '../helper/OrSeparator';
+import LoginAlt from './LoginAlt';
 import LoginHeader from './LoginHeader';
 
 function LoginForm() {
@@ -19,7 +18,7 @@ function LoginForm() {
   const [ email, setEmail ] = useState(LOGIN_USER.email);
   const [ loading, setLoading ] = useState(false);
   
-  const setLogin = useCallback(() => dispatch({ type: 'setLogin' }), [dispatch]);
+  const setLogin = useCallback(() => dispatch({ type: 'SET_LOGIN' }), [dispatch]);
 
   const [ , setLoginLocal ] = useLocalStorage(KEYS.LOGIN);
   const [ , setEmailLocal ] = useLocalStorage(KEYS.EMAIL);
@@ -90,13 +89,7 @@ function LoginForm() {
               { loading ? <Loader simple={true} /> : null }
             </button>
           </form>
-          <OrSeparator />
-
-          <button type='button' className={loading ? 'disabled' : ''}>
-              <img src={IMAGES.SIGN_IN_APPLE} alt='sign in apple' />
-              Sign in with Apple
-          </button>
-
+          <LoginAlt loading={loading} />
       </div>
     </section>
   )

@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
 
 import Login from '../components/Login/Login';
-import Home from '../components/Main/Home';
 
 import { NoLoginRequired } from '../components/helper/NoLoginRequired';
 import { ProtectedRoute } from '../components/helper/ProtectedRoute';
+import Loader from '../components/helper/Loader';
 // import Notifications from '../components/Notifications/Notifications';
+
+
+const HomeComponent = React.lazy(() => import('../components/Main/Home'));
 
 function MainRouter() {
   return (
@@ -15,18 +18,13 @@ function MainRouter() {
             <Route path="/*" element={
                 <ProtectedRoute>
                     {/* If Logged In Home Component Routes will be loaded */}
-                    <Home />
+                    <Suspense fallback={<Loader simple={true} />}>
+                        <HomeComponent /> 
+                    </Suspense>
                 </ProtectedRoute>
             }>
             </Route>
 
-            {/* <Route path="/notifications" element= {
-                <ProtectedRoute>                
-                    <Notifications />
-                </ProtectedRoute>
-            }></Route> */}
-
-            
             <Route path="/login" element = {
                 <NoLoginRequired>
                     {/* if already logged in will be redirected to /feed route inside <Home /> */}

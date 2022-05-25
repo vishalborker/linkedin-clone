@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import useDocumentTitle from '../../hooks/useDocumentTitle';
 
 import './Feed.scss';
@@ -8,11 +8,6 @@ import Post from './Post';
 function Feed() {
   useDocumentTitle('LinkedIn | Feed');
   const [data, setData] = useState([]);
-  const ref = useRef(0);
-
-
-  console.log('Feed Component loaded!!!!', ref.current)
-
   const memoizedArray = useMemo(() => {
     const arr = [];
     for(let i = 0; i< 50; i++)
@@ -21,8 +16,6 @@ function Feed() {
   }, []);
 
   useEffect(() => {
-    ref.current++;
-
     setData(memoizedArray);
   }, [memoizedArray])
 

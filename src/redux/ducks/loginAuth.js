@@ -1,5 +1,5 @@
-const SET_LOGIN = 'setLogin';
-const SET_LOGOUT = 'setLogout';
+const SET_LOGIN = 'SET_LOGIN';
+const SET_LOGOUT = 'SET_LOGOUT';
 
 export const setLogin = () => ({
     type: SET_LOGIN

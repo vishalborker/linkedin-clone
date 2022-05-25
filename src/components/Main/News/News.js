@@ -1,19 +1,26 @@
-import React, { useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 
 import { faAngleDown, faAngleUp, faCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { NavLink } from 'react-router-dom';
-import { NEWS_ITEMS } from '../../../constants/listItems';
-
 import { IMAGES } from '../../../constants/images';
+import { GET_NEWS } from '../../../redux/ducks/news';
 
 import './News.scss';
 
-
 function News() {
-  const [cropItems, setCropItems] = useState(true);
-  const newsItems = NEWS_ITEMS;
+  const dispatch = useDispatch();
+  const [ cropItems, setCropItems ] = useState(true);
+
+  const getNews = useCallback(() => dispatch({type: GET_NEWS}), [dispatch]);
+
+  const newsItems = useSelector(state => state.news.news);
+
+  useEffect(() => {
+    getNews();
+  }, [getNews])
   return (
     <aside className="news">
         <div className='header-container'>
@@ -23,6 +30,8 @@ function News() {
         <div className='news-container'>
           <ul>
             {
+
+              newsItems &&
               newsItems.slice(0, cropItems ? 5 : newsItems.length).map(news => (
                 <li className='news-item' key={news.id}>
                   <NavLink to={`/news/${news.id}`}>

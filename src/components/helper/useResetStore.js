@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 
 function useResetStore() {
   const dispatch = useDispatch();
-  const setLogout = useCallback(() => dispatch({ type: 'setLogout' }), [dispatch]);
+  const setLogout = useCallback(() => dispatch({ type: 'SET_LOGOUT' }), [dispatch]);
   const removeUser = useCallback(() => dispatch({ type: 'REMOVE_USER' }), [dispatch]);
 
   const resetStore = () => {

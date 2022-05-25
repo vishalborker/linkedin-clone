@@ -14,22 +14,21 @@ function AdCampaign() {
       {
         !user ? <Loader /> : 
         <>
-        <div className='add-header'>
-          <span>Ad</span>
-          <FontAwesomeIcon icon={faEllipsis} />
-        </div>
-        <div className='ad-content'>
-          <div className='companies'>
-            <img src={user.profileImg} alt='Profile' />
-            <img src={IMAGES.GOOGLE} alt='' />
+          <div className='add-header'>
+            <span>Ad</span>
+            <FontAwesomeIcon icon={faEllipsis} />
           </div>
-          <div className='sub-title'>
-            {user.username}, explore jobs at <em><b>Google</b></em> that match your skills
-          </div>
-          <button className='see-jobs'>See jobs</button>
-        </div>        
+          <div className='ad-content'>
+            <div className='companies'>
+              <img src={user.profileImg} alt='Profile' />
+              <img src={IMAGES.GOOGLE} alt='' />
+            </div>
+            <div className='sub-title'>
+              {user.username}, explore jobs at <em><b>Google</b></em> that match your skills
+            </div>
+            <button className='see-jobs'>See jobs</button>
+          </div>        
         </>
-
     }
     </aside>
   )
