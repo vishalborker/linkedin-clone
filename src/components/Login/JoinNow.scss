@@ -3,9 +3,8 @@
 
 .newLinkedIN {
     @include allmixin.flex-container-row;
-
-    justify-content: center;
-    align-items: center;
+    @include allmixin.flex-middle;
+    
     margin-top: 1rem;
 
     .button.join-now {
