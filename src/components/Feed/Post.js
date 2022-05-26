@@ -8,7 +8,7 @@ function Post({ data }) {
     <div className='content-container'>
         <div className='creator'>
             <div className='profile'>
-                <img src='https://source.unsplash.com/random/300x300?dogs' alt='Profile' />
+                <img src='https://source.unsplash.com/random/300x300?profile' alt='Profile' />
             </div>
             <div className='creator-details'>
                 <div className='creator-title'>
