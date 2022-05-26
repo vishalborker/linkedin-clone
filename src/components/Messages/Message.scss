@@ -1,0 +1,80 @@
+@use '../../scss/_allmixin.scss';
+@use '../../scss/_variables.scss';
+
+aside {
+    &.message-box {
+        min-width: 300px;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        margin-bottom: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+
+
+        .message-header-container {
+            z-index: 0;
+            @include allmixin.flex-container-row;
+            @include allmixin.flex-center;
+            transition: 200ms all ease-in-out;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgba(0,0,0,0.05);
+            }
+            
+            padding: 0.5rem;
+            .header {
+                @include allmixin.flex-container-row;
+                align-items: center;
+                img {
+                    height: 30px;
+                    width: 30px;
+                    border-radius: 50%;
+                }
+
+                span {
+                    margin-left: 0.75rem;
+                    font-weight: 600;
+                    font-size: 0.9rem;
+                }
+            }
+    
+            .options {
+                min-width: 5rem;
+                @include allmixin.flex-container-row;
+                @include allmixin.flex-center;
+                color: rgba(0,0,0, 0.6);
+                z-index: 1;
+
+                div {
+                    cursor: pointer;
+                    padding: 0.5rem;
+                    text-align: center;
+                    width: 2rem;
+                    border-radius: 50%;
+                    transition: 200ms all ease-in;
+                    &:hover {
+                        background: rgba(0,0,0,0.1);
+
+                    }
+                }
+            }
+        }
+    
+        .message-body-container {
+            height: 0px;
+            transition: height 0.25s ease-in-out;
+            padding: 0rem 0.5rem; 
+            visibility:hidden;
+
+            &.open {
+                height: 450px;
+                visibility: visible;
+            }
+        }
+        
+    }
+
+}

@@ -18,11 +18,11 @@ import './Home.scss';
 
 import useUser from '../../hooks/useUser';
 import Loader from '../helper/Loader';
+import Message from '../Messages/Message';
 
 function Home() {
   // setUser happens in Home
   const [ userData ] = useUser();
-  //const userData = {}
 
   return (
     <ErrorBoundary>
@@ -42,6 +42,9 @@ function Home() {
                 <News />
                 <AdCampaign />
                 <Copyright />
+            </section>
+            <section className='messages'>
+              <Message />
             </section>
           </main>
         </>
