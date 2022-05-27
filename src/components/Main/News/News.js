@@ -16,11 +16,13 @@ function News() {
 
   const getNews = useCallback(() => dispatch({type: GET_NEWS}), [dispatch]);
 
-  const newsItems = useSelector(state => state.news.news);
+  let newsItems = [];
+  newsItems = useSelector(state => state.news.news);
 
   useEffect(() => {
     getNews();
-  }, [getNews])
+  }, [getNews]);
+
   return (
     <aside className="news">
         <div className='header-container'>
@@ -35,7 +37,6 @@ function News() {
               newsItems.slice(0, cropItems ? 5 : newsItems.length).map(news => (
                 <li className='news-item' key={news.id}>
                   <NavLink to={`/news/${news.id}`}>
-                    
                     <span className='bullet'><FontAwesomeIcon icon={faCircle} /></span>
                     <span>                  
                       <span className='news-header'>{news.header}</span>

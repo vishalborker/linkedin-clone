@@ -40,7 +40,7 @@ function Home() {
             </section>
             <section className='right-pane'>
                 <News />
-                <AdCampaign />
+                <AdCampaign user={userData}/>
                 <Copyright />
             </section>
             <section className='messages'>

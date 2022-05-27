@@ -8,9 +8,6 @@ export const setNews = (data) => ({
 
 const newsReducer = (state, action) => {
     const { type, payload } = action;
-
-    console.log({type, payload});
-
     switch(type) {
         case SET_NEWS:
             return { ...state, news: payload };

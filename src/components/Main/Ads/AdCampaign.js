@@ -1,14 +1,12 @@
+import React from 'react';
 import { faEllipsis } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
-import { useSelector } from 'react-redux';
 import { IMAGES } from '../../../constants/images';
 import Loader from '../../helper/Loader';
 
 import './AdCampaign.scss';
 
-function AdCampaign() {
-  const user = useSelector(state => state.user.user);
+function AdCampaign({user}) {
   return (
     <aside className="ads">
       {
