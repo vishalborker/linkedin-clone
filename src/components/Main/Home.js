@@ -29,7 +29,7 @@ function Home() {
       {
         !userData ? <Loader /> :
         <>
-          <Navbar user={userData}/>
+          <Navbar />
           <main className='feed-page'>
             <section className='left-pane'>
                 <ProfileInfo user={userData}/>

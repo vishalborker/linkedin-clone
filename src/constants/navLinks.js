@@ -1,9 +1,11 @@
 import { 
     faBell, 
     faBriefcase, 
+    faCompass, 
     faHome, 
     faMessage, 
-    faUserGroup
+    faUserGroup,
+    faVideo
 } from '@fortawesome/free-solid-svg-icons';
 
 export const NAVLINKS = [{
@@ -27,3 +29,24 @@ export const NAVLINKS = [{
         href: '/notifications',
         faIcon: faBell
 }];
+
+
+export const LANDING_NAVBAR_LINKS = [
+    {
+        key: 'Discover',
+        href: '/discover',
+        icon: faCompass,
+    }, {
+        key: 'People',
+        href: '/people',
+        icon: faUserGroup,
+    }, {
+        key: 'Learning',
+        href: '/linkedin-learning',
+        icon: faVideo,
+    }, {
+        key: 'Jobs',
+        href: '/jobs',
+        icon: faBriefcase,
+    }
+];

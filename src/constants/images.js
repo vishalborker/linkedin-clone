@@ -4,7 +4,7 @@ import userAvatar from '../images/user-avatar.jpg';
 import workLogo from '../images/work-image.PNG';
 import profileBGImage from '../images/background-caption.jpg';
 import premiumImg from '../images/premium.svg';
-import peopleImg from '../images/people.svg';
+import peopleImg2 from '../images/people2.svg';
 import hashtag from '../images/hashtag.svg'
 
 //post-create
@@ -29,6 +29,14 @@ import PrivacyPublic from '../images/privacy-public.svg';
 import SignInApple from '../images/sign-in-apple.svg';
 
 
+// landing page
+import discover from '../images/discover.svg'
+import job from '../images/job.svg';
+import learning from '../images/learning.svg';
+import people from '../images/people.svg';
+
+import landingPagePerson from '../images/landing-page-person.svg';
+
 export const IMAGES = {
     LINKEDIN_MAIN: mainLogo,
     LINKEDIN_MINI: miniLogo,
@@ -36,7 +44,7 @@ export const IMAGES = {
     WORK_IMAGE: workLogo,
     PROFILE_BG_IMAGE: profileBGImage,
     PREMIUM_IMG: premiumImg,
-    PEOPLE: peopleImg,
+    PEOPLE: peopleImg2,
     HASHTAG: hashtag,
     POST_PHOTO: PostPhoto,
     POST_VIDEO: PostVideo,
@@ -56,5 +64,13 @@ export const ENGAGEMENTS = {
     MainComment,
     MainShare,
     MainSend,
+}
+
+export const LANDING_PAGE_IMAGES = {
+    DISCOVER: discover,
+    JOB: job,
+    LEARNING: learning,
+    PEOPLE: people,
+    LANDING_PAGE_PERSON: landingPagePerson,
 }
 

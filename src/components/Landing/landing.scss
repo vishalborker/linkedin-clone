@@ -1,0 +1,238 @@
+@use '../../scss/_variables.scss';
+@use '../../scss/_allmixin.scss';
+
+
+:root {
+    --color-background-canvas: #f3f2f0;
+    --color-background-canvas-mobile: #eae6df;
+    --color-background-canvas-tint: #ffffff;
+    --color-background-canvas-dark: #000000;
+}
+main.landing {
+    section.find-job {
+        padding: 2rem 3.5rem;
+        background-color: var(--color-background-canvas);
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        h1 {
+            font-size: 3rem;
+            font-weight: 200;
+            color: rgba(0, 0, 0, 0.9);
+            width: 50%;
+            margin: 0;
+        }
+
+        .suggested-searches {
+            user-select: none;
+            width:  50%;
+            margin-left: 2rem;
+
+
+            button {
+                margin-top: 0.5rem;
+                border: none;
+                cursor: pointer;
+                display: flex;
+                color: rgba(0,0,0, 0.6);
+                font-weight: 500;
+                font-size: 1rem;
+                align-items: center;
+                padding: 0.5rem;
+                background-color: transparent;
+                border-radius: 25px;
+    
+                &:hover {
+                    background-color: rgba(0,0,0, 0.05);
+                }
+    
+                .show-more {
+                    margin-right: 0.25rem;
+                }
+            }
+            h4 {
+                font-size: 16px;
+                font-weight: 600;
+                text-transform: uppercase;
+                line-height: 1.25;
+                color: rgba(0, 0, 0, 0.6);
+                
+            }
+
+
+            .search-pills {
+                span {
+                    display: inline-block;
+                    cursor: pointer;
+                    padding: 1rem;
+                    font-size: 1rem;
+                    color: rgba(0, 0, 0, 0.6);
+                    border: 2px solid rgba(0, 0, 0, 0.6);
+                    border-radius: 35px;
+                    margin-bottom: 1rem;
+                    margin-right: 1rem;
+                    min-height: 2rem;
+                    font-weight: 600;
+                    &:hover {
+                        background-color: rgba(0, 0, 0, 0.05);;
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    .welcome-section {
+        padding: 0rem 3.5rem;
+        padding-top: 4rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        overflow: hidden;
+
+        .login-section {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+
+            h1 {
+                color: #8f5849;
+                font-size: 56px;
+                font-weight: 200;
+                margin:0;
+                margin-bottom: 0.5rem;
+            }
+
+            .login-form {
+                display: flex;
+                flex-direction: column;
+                width: 70%;
+        
+        
+                input {
+                    padding: 1em;
+                    border: none;
+                    font-size: 1em;
+                    font-weight: 400;
+                    border: 1px solid #ccc;
+                    border-radius: variables.$border-radius;
+                    margin: 1em 0;
+                    position: relative;
+                    width: 100%;
+                }
+        
+        
+                input:focus {
+                    outline: variables.$focus-outline-color;            
+                }
+        
+                button[type="submit"] {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 1em 0;
+                    @include allmixin.button;
+                    font-weight: 700;
+                    border-radius: 25px;
+                    cursor: pointer;
+        
+                    &:hover {
+                        background-color: variables.$button-hover-color;
+                    }
+        
+                    &.disabled {
+                        cursor: not-allowed;
+                    }
+                }
+            }
+        }
+
+        img {
+            width: 800px;
+            height: 500px;
+            background-size: cover;
+            margin-right: -150px;
+        }
+    }
+}
+
+
+nav {
+    &.navigation {
+        &.landing {
+            position: static;
+            padding-top: 1rem;
+            border-bottom: none;
+
+            .logo-search-container {
+                img {
+                    height: 40px;
+                }
+            }
+            .nav-links {
+                ul {
+                    li {
+                        
+                        &.join-now {
+                            border-left: 1px solid rgba(0,0,0,0.1);
+                            a {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                justify-content: center;
+                                span {
+                                    span {
+                                        font-size: 0.9rem;
+                                        font-weight: 600;
+                                        padding: 0.6rem;
+                                        border-radius: 6px;
+                                        margin-left: 0.25rem;
+                                    
+                                        &:hover {
+                                            background-color: rgba(0,0,0,0.1);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &.sign-in {
+                            a {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                justify-content: center;
+                                span {
+                                    span {
+                                        display: inline-block;
+                                        font-size: 0.9rem;
+                                        font-weight: 600;
+                                        padding: 0.6rem;
+                                        text-align: center;
+                                        border-radius: 6px;
+                                        margin-left: 0.35rem;
+                                        width: 5rem;
+                                        border: 2px solid variables.$main-color;
+                                        height: 80%;
+ 
+                                        color: variables.$main-color;
+                                        transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+                                        border-radius: 25px;
+                            
+                                        &:hover {
+                                            box-shadow:inset 0px 0px 0px 1px variables.$main-color;
+                                            
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
