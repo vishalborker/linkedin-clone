@@ -7,14 +7,18 @@ import FindTheJob from './FindTheJob';
 import PostAJob from './PostAJob';
 
 import './landing.scss';
+import LinkedInPromote from './LinkedInPromote';
+import ExploreTopics from './ExploreTopics';
 
 function Landing() {
   return (
     <main className='landing'>
         <LandingNavbar links={LANDING_NAVBAR_LINKS}/>
         <LandingWelcome />
+        <ExploreTopics />
         <FindTheJob />
         <PostAJob />
+        <LinkedInPromote />
     </main>
   )
 }

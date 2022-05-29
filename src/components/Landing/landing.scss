@@ -7,14 +7,117 @@
     --color-background-canvas-mobile: #eae6df;
     --color-background-canvas-tint: #ffffff;
     --color-background-canvas-dark: #000000;
+    --color-text-dark: #8f5849;
 }
 main.landing {
+
+    section.linkedin-promote {
+        overflow: hidden;
+        position: relative;
+        padding: 6rem 3.5rem;
+        background-color: var(--color-background-canvas);
+        .navigation-button {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 2rem;
+
+            .button {
+                border: none;
+                background-color: transparent;
+                cursor: pointer;
+                padding: 0.5rem 0.75rem;
+                color: rgba(0,0,0,0.5);
+                font-size: 1rem;
+                font-weight: 600;
+                border-radius: 6px;
+
+                &:hover {
+                    color: rgba(0,0,0,0.7);
+                    background-color: rgba(0,0,0,0.05);
+                }
+
+                svg {
+                    margin-right: 0.5rem;
+                }
+                span {
+
+                }
+            }
+            .previous {
+                svg {
+                    margin-right: 0.5rem;
+                }
+                span {
+
+                }
+            }
+            .next {
+                svg {
+                    margin-left: 0.5rem;
+                }
+                span {
+
+                }
+            }
+
+            
+        }
+
+        .carousel-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            transform: translate3d(0, 0px, 0px);
+            transition: transform 500ms ease-in-out;
+            .carousel-holder {
+                display: flex;
+                flex: 0 0 100%;
+            }
+            .carousel-item {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                align-items: center;
+                .carousel-text {
+                    width: 50%;
+                    h1, h4 {
+                        margin: 0;
+                        line-height: 1.25;
+                    }
+
+                    h1 {
+                       color: var(--color-text-dark);
+                       font-size: 2.5rem;
+                       font-weight: 400;
+                    }
+                    h4 {
+                        margin-top: 1rem;
+                        color: rgba(0, 0, 0, 0.9);        
+                        font-weight: 200;
+                        font-size: 2rem;
+                    }
+                    
+                }
+
+                .carousel-image {
+                    width: 50%;
+                    display: flex;
+                    justify-content: center;
+                    img {
+                        height: 400px;
+                        width: 400px;
+                    }
+                }
+            }
+        }
+    }
     section.post-job {
         display: flex;
         flex-direction: row;
         align-items: center;
 
-        padding: 2rem 3.5rem;
+        padding: 5rem 3.5rem;
         background-color: var(--color-background-canvas-mobile);
         h1 {
             margin: 0;
@@ -42,7 +145,8 @@ main.landing {
                  
         }
     }
-    section.find-job {
+    
+    section.find-job, section.explore-topics {
         padding: 2rem 3.5rem;
         background-color: var(--color-background-canvas);
         display: flex;
@@ -112,10 +216,10 @@ main.landing {
                 }
             }
         }
-
-
     }
-
+    section.explore-topics {
+        background-color: var(--color-background-canvas-mobile);
+    }
     .welcome-section {
         padding: 0rem 3.5rem;
         padding-top: 4rem;

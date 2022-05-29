@@ -37,6 +37,11 @@ import people from '../images/people.svg';
 
 import landingPagePerson from '../images/landing-page-person.svg';
 
+//carousel landing page
+import carousel1 from '../images/promotion-carousel1-linkedin.png';
+import carousel2 from '../images/promotion-carousel2-linkedin.png';
+import carousel3 from '../images/promotion-carousel3-linkedin.png';
+
 export const IMAGES = {
     LINKEDIN_MAIN: mainLogo,
     LINKEDIN_MINI: miniLogo,
@@ -72,5 +77,8 @@ export const LANDING_PAGE_IMAGES = {
     LEARNING: learning,
     PEOPLE: people,
     LANDING_PAGE_PERSON: landingPagePerson,
+    CAROUSEL_1: carousel1,
+    CAROUSEL_2: carousel2,
+    CAROUSEL_3: carousel3,
 }
 
