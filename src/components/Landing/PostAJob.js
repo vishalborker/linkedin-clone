@@ -1,8 +1,11 @@
-import React from 'react'
+import React from 'react';
 
 function PostAJob() {
   return (
-    <div>PostAJob</div>
+    <section className='post-job'>
+      <h1>Post your job for millions of people to see</h1>
+      <button>Post a job</button>
+    </section>
   )
 }
 

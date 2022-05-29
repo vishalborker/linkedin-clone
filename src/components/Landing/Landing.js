@@ -2,11 +2,11 @@ import React from 'react'
 import { LANDING_NAVBAR_LINKS } from '../../constants/navLinks'
 import LandingNavbar from './LandingNavbar';
 
-import './landing.scss';
-// import LandingLogin from './LandingLogin';
-// import { LANDING_PAGE_IMAGES } from '../../constants/images';
 import LandingWelcome from './LandingWelcome';
 import FindTheJob from './FindTheJob';
+import PostAJob from './PostAJob';
+
+import './landing.scss';
 
 function Landing() {
   return (
@@ -14,8 +14,9 @@ function Landing() {
         <LandingNavbar links={LANDING_NAVBAR_LINKS}/>
         <LandingWelcome />
         <FindTheJob />
+        <PostAJob />
     </main>
   )
 }
 
-export default Landing
+export default Landing;

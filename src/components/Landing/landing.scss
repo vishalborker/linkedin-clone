@@ -9,6 +9,39 @@
     --color-background-canvas-dark: #000000;
 }
 main.landing {
+    section.post-job {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        padding: 2rem 3.5rem;
+        background-color: var(--color-background-canvas-mobile);
+        h1 {
+            margin: 0;
+            font-size: 40px;
+            font-weight: 400;
+            color: #b24020;
+            width: 50%;
+            margin-right: 2rem;
+        }
+
+        button {
+                font-size: 1.1rem;
+                font-weight: 600;
+                padding: 1rem;
+                height: 80%;
+                cursor: pointer;
+                color: variables.$main-color;
+                transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+                border: 1px solid variables.$main-color;
+                border-radius: 25px;
+    
+                &:hover {
+                    box-shadow:inset 0px 0px 0px 1px variables.$main-color;
+                }
+                 
+        }
+    }
     section.find-job {
         padding: 2rem 3.5rem;
         background-color: var(--color-background-canvas);
@@ -214,7 +247,7 @@ nav {
                                         text-align: center;
                                         border-radius: 6px;
                                         margin-left: 0.35rem;
-                                        width: 5rem;
+                                        min-width: 5rem;
                                         border: 2px solid variables.$main-color;
                                         height: 80%;
  
