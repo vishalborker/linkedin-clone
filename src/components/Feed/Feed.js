@@ -3,7 +3,7 @@ import useDocumentTitle from '../../hooks/useDocumentTitle';
 
 import './Feed.scss';
 import CreatePost from '../Main/Post/CreatePost';
-import Post from './Post';
+import FeedPost from './FeedPost';
 
 function Feed() {
   useDocumentTitle('LinkedIn | Feed');
@@ -27,7 +27,7 @@ function Feed() {
         {
           data.map(a => {
             return (
-              <Post data={a} key={a}/>
+              <FeedPost data={a} key={a}/>
             )
           })
         }

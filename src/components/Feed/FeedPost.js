@@ -1,9 +1,9 @@
 import React from 'react';
 import { ENGAGEMENTS, IMAGES } from '../../constants/images';
 
-import './Post.scss';
+import './FeedPost.scss';
 
-function Post({ data }) {
+function FeedPost({ data }) {
   return (
     <div className='content-container'>
         <div className='creator'>
@@ -77,4 +77,4 @@ function Post({ data }) {
   )
 }
 
-export default Post;
+export default FeedPost;

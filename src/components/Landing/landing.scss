@@ -11,6 +11,99 @@
 }
 main.landing {
 
+    section.social {
+        padding: 4rem 3.5rem;
+        background-color: var(--color-background-canvas-tint);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .connect-people, .learn-skills {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            h1 {
+                margin: 0;
+                margin: 2rem 0;
+                font-size: 3rem;
+                font-weight: 200;
+                color: rgba(0, 0, 0, 0.9);
+                line-height: 1.25;
+
+            }
+
+            img {
+                width: 300px;
+                height: 300px;
+            }
+
+            button {
+                display: block;
+                cursor: pointer;
+                padding: 1rem 1.5rem;
+                font-size: 1.25rem;
+                color: rgba(0, 0, 0, 0.6);
+                border: 1px solid rgba(0, 0, 0, 0.6);
+                min-height: 2rem;
+                font-weight: 600;
+                background-color: transparent;
+                min-height: 3.5rem;
+                position: relative;
+
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0.05);;
+                }
+
+                &.find-people {
+                    border-radius: 35px;
+                }
+
+                &.choose-topic {
+                    span {
+                        margin-right: 1rem;
+                    }
+                }
+                
+                ul.topics-dropdown {
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    right: 0;
+                    overflow-y: scroll;
+                    max-height: 300px;
+                    // min-width: 250px;
+                    border: 1px solid rgba(0,0,0,0.2);
+
+                    li {
+                        padding: 1rem;
+                        a {
+                            display: flex;
+                            flex-direction: column;
+                            justify-items: center;
+                            align-items: flex-start;
+                            span:first-of-type {
+                                color:rgba(0, 0, 0, 0.7);
+                                font-weight: 600;
+                                font-size: 0.9rem;
+                            }
+
+                            span:last-of-type {
+                                color:rgba(0, 0, 0, 0.4);
+                                font-weight: 500;
+                                font-size: 0.75rem;
+                            }
+                        }
+                        a:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+
     section.linkedin-promote {
         overflow: hidden;
         position: relative;
@@ -39,24 +132,15 @@ main.landing {
                 svg {
                     margin-right: 0.5rem;
                 }
-                span {
-
-                }
             }
             .previous {
                 svg {
                     margin-right: 0.5rem;
                 }
-                span {
-
-                }
             }
             .next {
                 svg {
                     margin-left: 0.5rem;
-                }
-                span {
-
                 }
             }
 
@@ -129,19 +213,19 @@ main.landing {
         }
 
         button {
-                font-size: 1.1rem;
-                font-weight: 600;
-                padding: 1rem;
-                height: 80%;
-                cursor: pointer;
-                color: variables.$main-color;
-                transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
-                border: 1px solid variables.$main-color;
-                border-radius: 25px;
-    
-                &:hover {
-                    box-shadow:inset 0px 0px 0px 1px variables.$main-color;
-                }
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 1rem;
+            height: 80%;
+            cursor: pointer;
+            color: variables.$main-color;
+            transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+            border: 1px solid variables.$main-color;
+            border-radius: 25px;
+
+            &:hover {
+                box-shadow:inset 0px 0px 0px 1px variables.$main-color;
+            }
                  
         }
     }

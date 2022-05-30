@@ -10,7 +10,11 @@ import './landing.scss';
 import LinkedInPromote from './LinkedInPromote';
 import ExploreTopics from './ExploreTopics';
 
+import Social from './Social';
+
 function Landing() {
+
+  document.title = 'LinkedIn: Log In or Sign Up'
   return (
     <main className='landing'>
         <LandingNavbar links={LANDING_NAVBAR_LINKS}/>
@@ -19,6 +23,7 @@ function Landing() {
         <FindTheJob />
         <PostAJob />
         <LinkedInPromote />
+        <Social />
     </main>
   )
 }

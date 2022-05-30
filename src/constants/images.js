@@ -42,6 +42,10 @@ import carousel1 from '../images/promotion-carousel1-linkedin.png';
 import carousel2 from '../images/promotion-carousel2-linkedin.png';
 import carousel3 from '../images/promotion-carousel3-linkedin.png';
 
+//Social section landing page
+import connectPeople from '../images/connect-people.svg';
+import onLaptop from '../images/on-laptop.svg';
+
 export const IMAGES = {
     LINKEDIN_MAIN: mainLogo,
     LINKEDIN_MINI: miniLogo,
@@ -80,5 +84,7 @@ export const LANDING_PAGE_IMAGES = {
     CAROUSEL_1: carousel1,
     CAROUSEL_2: carousel2,
     CAROUSEL_3: carousel3,
+    CONNECT_PEOPLE: connectPeople,
+    LEARN_SKILLS: onLaptop,
 }
 
