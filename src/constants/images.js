@@ -1,6 +1,5 @@
 import mainLogo from '../images/logo.svg';
 import miniLogo from '../images/logo-mini.svg';
-import userAvatar from '../images/user-avatar.jpg';
 import workLogo from '../images/work-image.PNG';
 import profileBGImage from '../images/background-caption.jpg';
 import premiumImg from '../images/premium.svg';
@@ -49,7 +48,6 @@ import onLaptop from '../images/on-laptop.svg';
 export const IMAGES = {
     LINKEDIN_MAIN: mainLogo,
     LINKEDIN_MINI: miniLogo,
-    USER_AVATAR: userAvatar,
     WORK_IMAGE: workLogo,
     PROFILE_BG_IMAGE: profileBGImage,
     PREMIUM_IMG: premiumImg,
