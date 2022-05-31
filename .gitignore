@@ -24,3 +24,5 @@ yarn-error.log*
 
 /json-server
 .env
+
+db.json

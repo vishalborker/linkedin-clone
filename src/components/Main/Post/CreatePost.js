@@ -50,31 +50,31 @@ function CreatePost({ closeCreatePost }) {
                 </div>
                 <div className='action-container'>
                     <div className='upload-actions'>
-                        <button className='image' data-tooltip='Add a photo'>
+                        <button className='action-button image' data-tooltip='Add a photo'>
                             <FontAwesomeIcon icon={faImage} />
                         </button>
 
-                        <button className='video' data-tooltip='Add a video'>
+                        <button className='video action-button' data-tooltip='Add a video'>
                             <FontAwesomeIcon icon={faVideo} />
                         </button>
 
-                        <button className='document' data-tooltip='Add a document'>
+                        <button className='document action-button' data-tooltip='Add a document'>
                             <FontAwesomeIcon icon={faFileLines} />
                         </button>
 
-                        <button className='hiring' data-tooltip={`Share that you're hiring`}>
+                        <button className='hiring action-button' data-tooltip={`Share that you're hiring`}>
                             <FontAwesomeIcon icon={faBriefcase} />
                         </button>
 
-                        <button className='celebrate' data-tooltip='Celebrate a occassion'>
+                        <button className='celebrate action-button' data-tooltip='Celebrate a occassion'>
                             <FontAwesomeIcon icon={faCertificate} />
                         </button>
 
-                        <button className='create-poll' data-tooltip='Create a poll'>
+                        <button className='create-poll action-button' data-tooltip='Create a poll'>
                             <FontAwesomeIcon icon={faChartSimple} />
                         </button>
 
-                        <button className='add-this' data-tooltip='Add to your post'>
+                        <button className='add-this action-button' data-tooltip='Add to your post'>
                             <FontAwesomeIcon icon={faEllipsis} />
                         </button>
                     </div>

@@ -15,6 +15,13 @@ button {
     cursor: pointer;
 }
 
+
+@keyframes slideDown {
+    100% {
+        transform: translateY(15px);
+    }
+}
+
 section.create-post {
     position: fixed;
     top: 5%;
@@ -147,6 +154,39 @@ section.create-post {
                 flex-direction: row;
                 justify-content: space-between;
                 border-right: 1px solid rgba(0,0,0,0.1);
+                
+                
+                .action-button {
+                    position: relative;
+                    &:hover {
+                        &::before {
+                            visibility: visible;
+                            animation: slideDown 200ms linear forwards;
+                        }
+                    }
+                }
+                .action-button::before {
+                    display: flex;
+                    content: attr(data-tooltip);
+                    position: absolute;
+                    bottom: calc(100% + 20px);
+                    left: -70%;
+                    color:rgba(0,0,0,0.8);
+                    font-weight: 400;
+                    font-size: 0.8rem;
+                    width: 100px;
+                    background-color: white;
+                    padding: 0.4rem 0.75rem;
+                    visibility: hidden;
+                    transition: display 200ms ease-in-out;
+                    transform: translateY(10px);
+                    transition: transform 1s ease-in-out;
+                    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+                    border-radius: 8px;
+                    transition: animate 100ms ease-in-out;
+                    word-break: keep-all;
+                }
+                
 
 
                 button {
