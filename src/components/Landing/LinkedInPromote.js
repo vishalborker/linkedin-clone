@@ -12,16 +12,16 @@ function LinkedInPromote() {
 
   const slideLeft = () => {
     if (currentSlide.current > 1) {
-      slideXCurrent.current = slideXCurrent.current + containerRef.current.clientWidth;
-      containerRef.current.style.transform = `translate3d(${slideXCurrent.current}px, 0px, 0px)`;
+      slideXCurrent.current = slideXCurrent.current + 100;
+      containerRef.current.style.transform = `translate3d(${slideXCurrent.current}%, 0px, 0px)`;
       currentSlide.current--;
     }
   }
 
   const slideRight = () => {
     if (currentSlide.current < 3) {
-      slideXCurrent.current = slideXCurrent.current - containerRef.current.clientWidth;
-      containerRef.current.style.transform = `translate3d(${slideXCurrent.current}px, 0px, 0px)`;
+      slideXCurrent.current = slideXCurrent.current - 100;
+      containerRef.current.style.transform = `translate3d(${slideXCurrent.current}%, 0px, 0px)`;
       currentSlide.current++;
     }
   }

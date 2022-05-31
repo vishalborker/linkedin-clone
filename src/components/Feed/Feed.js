@@ -2,8 +2,8 @@ import React, { useEffect, useMemo, useState } from 'react';
 import useDocumentTitle from '../../hooks/useDocumentTitle';
 
 import './Feed.scss';
-import CreatePost from '../Main/Post/CreatePost';
 import FeedPost from './FeedPost';
+import StartAPost from '../Main/Post/StartAPost';
 
 function Feed() {
   useDocumentTitle('LinkedIn | Feed');
@@ -21,7 +21,7 @@ function Feed() {
 
   return (
     <div>
-      <CreatePost />
+      <StartAPost />
 
       <div className='main-feed'>
         {

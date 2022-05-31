@@ -1,0 +1,31 @@
+@use '../../../scss/allmixin';
+@use '../../../scss/variables';
+
+.options-container {
+    display: flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    button {
+        &.item-container {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            border: none;
+            background-color: white;
+            transition: background-color 200ms ease-in-out;
+            font-weight: 600;
+            color: rgba(0,0,0,0.5);
+            &:hover {
+                background-color: variables.$hover-bg-color;
+            }
+            span {
+                margin-left: 0.5rem;
+            }
+        }
+    }
+}

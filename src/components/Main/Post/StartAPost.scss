@@ -1,0 +1,43 @@
+@use '../../../scss/allmixin';
+@use '../../../scss/variables';
+
+$font-color: rgba(0,0,0, 0.6);
+
+.post-container {
+    background: white;
+    border-radius: 6px;
+    @include allmixin.flex-container-col;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    border: 1px solid rgba(0,0,0,0.2);
+    .create-container {
+        @include allmixin.flex-container-row;
+        justify-content: space-between;
+        margin-bottom: 0.75rem;
+
+        button {
+            width: 88%;
+            cursor: pointer;
+            border-radius: 25px;
+            border: none;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            background-color: white;
+            text-align: left;
+            padding: 0 1em;
+            color: rgba(0,0,0,0.5);
+            font-weight: 600;
+            font-size: 0.85em;
+            transition: background-color 100ms ease-in-out;
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.09)
+            }
+        }
+
+        img {
+            height: 50px;
+            width: 50px;
+            border: 1px solid white;
+            border-radius: 50%;
+        }
+    }
+}
