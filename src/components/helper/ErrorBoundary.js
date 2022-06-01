@@ -1,9 +1,10 @@
 import React from 'react';
+import SomethingWentWrong from '../Error/SomethingWentWrong';
 
 export class ErrorBoundary extends React.Component {
     constructor(props) {
       super(props);
-      this.state = { hasError: false };
+      this.state = { hasError: true };
     }
   
     static getDerivedStateFromError(error) {
@@ -19,7 +20,7 @@ export class ErrorBoundary extends React.Component {
     render() {
       if (this.state.hasError) {
         // You can render any custom fallback UI
-        return <h1>Something went wrong. please try again</h1>;
+        return <SomethingWentWrong />;
       }
   
       return this.props.children; 
