@@ -1,7 +1,7 @@
 export const POSTS = [
     {
       id: 1,
-      author: 'Gerard Buttler',
+      author: 'Gerard Butler',
       authorId: 1,
       profileImg: 'https://source.unsplash.com/random/300x300?profile',
       type: 'post',
