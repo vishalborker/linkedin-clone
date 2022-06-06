@@ -6,7 +6,6 @@ export function* handleGetNews(action) {
     const { payload } = action;
     try {
         const response = yield call(requestGetNews, payload);
-        console.log({response});
         yield put(setNews(response));
     } catch(err) {
         console.log({err});

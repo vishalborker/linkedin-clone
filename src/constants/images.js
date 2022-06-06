@@ -18,6 +18,10 @@ import Like from '../images/Like.svg'
 import Love from '../images/Love.svg';
 import Clap from '../images/Clap.svg';
 
+import Curious from '../images/curious.svg'
+import Support from '../images/support.svg';
+import Insightful from '../images/insightful.svg';
+
 import MainLike from '../images/main-like.svg'
 import MainComment from '../images/main-comment.svg';
 import MainShare from '../images/main-share.svg';
@@ -65,6 +69,9 @@ export const ENGAGEMENTS = {
     Like,
     Love,
     Clap,
+    Curious,
+    Insightful,
+    Support,
     MainLike,
     MainComment,
     MainShare,

@@ -1,33 +1,36 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import useDocumentTitle from '../../hooks/useDocumentTitle';
 
-import './Feed.scss';
 import FeedPost from './FeedPost';
 import StartAPost from '../Main/Post/StartAPost';
+import { useDispatch, useSelector } from 'react-redux';
+
+import { GET_POSTS } from '../../redux/ducks/posts';
+
+import './Feed.scss';
 
 function Feed() {
   useDocumentTitle('LinkedIn | Feed');
-  const [data, setData] = useState([]);
-  const memoizedArray = useMemo(() => {
-    const arr = [];
-    for(let i = 0; i< 50; i++)
-      arr.push(i);
-    return arr;
-  }, []);
+  const dispatch = useDispatch();
+
+  // const [posts, setPosts] = useState([]);
+
+  const getPosts = useCallback(() => dispatch({type: GET_POSTS}), [dispatch]);
+  const posts = useSelector(state => state.posts.posts);
 
   useEffect(() => {
-    setData(memoizedArray);
-  }, [memoizedArray])
-
+    getPosts();
+  }, [getPosts])
+  
   return (
     <div>
       <StartAPost />
 
       <div className='main-feed'>
         {
-          data.map(a => {
+          posts && posts.map(data => {
             return (
-              <FeedPost data={a} key={a}/>
+              <FeedPost data={data} key={data.id}/>
             )
           })
         }
