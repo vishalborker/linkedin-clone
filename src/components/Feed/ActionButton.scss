@@ -1,0 +1,39 @@
+@use '../../scss/allmixin';
+@use '../../scss/variables';
+
+.button-container {
+    display: flex;
+    padding: 0.2rem 0.5rem 0 0.5rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+        
+        cursor: pointer;
+        background-color: white;
+        @include allmixin.flex-container-row;
+        align-items: center;
+        border: none;
+        padding: 1rem 0;
+        border-radius: 4px;
+        width: 100%;
+        justify-content: center;
+
+        img {
+            margin-right: 0.25rem;
+            width: 25px;
+            height: 25px;
+            opacity: 0.6;
+        }
+        &:hover {
+            background-color: variables.$hover-bg-color;
+        }
+
+        span {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color:rgba(0, 0, 0, 0.5)
+        }
+    }
+}

@@ -1,0 +1,69 @@
+@use '../../scss/_variables.scss';
+@use '../../scss/_allmixin.scss';
+
+.search-container {
+    @include allmixin.flex-container-row;
+    @include allmixin.flex-center;
+    background: variables.$navlink-search-bg-color;
+    color: variables.$navlink-search-text-color;
+    margin-left: 1rem;
+    padding: 0.5em 1rem;
+    border-radius: 4px;
+
+    input[type="text"] {
+        background: variables.$navlink-search-bg-color;
+        color: variables.$navlink-search-text-color;
+        font-size: 0.85rem;
+        border: none;
+        outline: 1px solid variables.$navlink-search-bg-color;
+        width: 14rem;
+        transition: width 300ms ease-in-out, font-size 300ms ease-in-out;
+        padding-left: 0.5rem;
+
+        &:focus {
+            width: 18em;
+            font-size: 1rem;
+        }
+    }
+
+    .search-bar {
+        font-size: 0.75em;
+        color: rgba(0,0,0, 0.6);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .search-container {
+        @include allmixin.flex-container-row;
+        @include allmixin.flex-center;
+        background: white;
+        color: variables.$navlink-search-text-color;
+        margin-left: 0;
+        padding: 0 0;
+        border-radius: 4px;
+
+        input[type="text"] {
+            background: variables.$navlink-search-bg-color;
+            color: variables.$navlink-search-text-color;
+            font-size: 0.85rem;
+            border: none;
+            outline: 1px solid variables.$navlink-search-bg-color;
+            width: 14rem;
+            transition: width 300ms ease-in-out, font-size 300ms ease-in-out;
+            // padding-left: 0.5rem;
+            display: none;
+
+            &:focus {
+                width: 18em;
+                font-size: 1rem;
+            }
+
+
+        }
+
+        .search-bar {
+            font-size: 0.75em;
+            color: rgba(0,0,0, 0.6);
+        }
+    }
+}

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 function PostImage({src}) {
   return (
@@ -6,4 +6,4 @@ function PostImage({src}) {
   )
 }
 
-export default PostImage
+export default PostImage;

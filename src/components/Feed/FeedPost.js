@@ -7,7 +7,7 @@ import Engagements from './Engagements';
 
 import './FeedPost.scss';
 import FollowButton from './FollowButton';
-import InteractiveContent from './InteractiveContent';
+import InteractiveContent from './Interactive/InteractiveContent';
 import PostContent from './PostContent';
 import Subtitle from './Subtitle';
 import Timeline from './Timeline';
@@ -26,7 +26,7 @@ function FeedPost({ data }) {
         </div>
         <div className='post-content-container'>
             <PostContent contentText={data.contentText} />
-            <InteractiveContent image={data.image} video={data.video} />
+            <InteractiveContent image={data.image} video={data.video} file={data.file} />
         </div>
         <div className='engagements-container'>
             <div className='engagements'>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function AuthorProfile({profileImg}) {
+function AuthorProfile({ profileImg }) {
   return (
     <div className='profile'>
         <img src={profileImg} alt='Profile' />

@@ -1,5 +1,7 @@
 import React from 'react'
-import { IMAGES } from '../../constants/images'
+import { IMAGES } from '../../constants/images';
+
+import './Timeline.scss';
 
 function Timeline({ postedAt }) {
   return (

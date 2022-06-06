@@ -7,6 +7,8 @@ import { IMAGES } from '../../constants/images';
 import { useSelector } from 'react-redux';
 import ProfilePopUp from './ProfilePopUp';
 
+import './NavigationLinks.scss';
+
 function NavigationLinks({ links }) {
   const user = useSelector(state => state.user.user);
   const [showProfileDropdown, setShowProfileDropdown] = useState(false);

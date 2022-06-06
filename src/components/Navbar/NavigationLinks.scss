@@ -1,0 +1,98 @@
+@use '../../scss/_variables.scss';
+@use '../../scss/_allmixin.scss';
+
+nav {
+    &.navigation {
+        .nav-links {
+            height: 100%;
+            display: flex;
+            ul {
+                margin: 0;
+                padding: 0;
+                @include allmixin.flex-container-row;
+            }
+        }
+        
+        ul li {
+            list-style: none;
+            // padding: 0 1em;
+            min-width: 5em;
+            position: relative;
+            height: 100%;
+            @include allmixin.flex-container-row;
+            @include allmixin.flex-center;
+            
+            .profile-option {
+                cursor: pointer;
+                @include allmixin.flex-container-col;
+                @include allmixin.flex-center;
+        
+                height: 100%;
+                justify-content: center;
+                min-width: 5em;
+                text-decoration: none;
+                color: rgba(0,0,0, 0.5);
+                transition: color 100ms ease-in-out, font-weight 100ms ease-in-out;
+        
+                &:hover, &.active {
+                    color: rgba(0,0,0, 1);
+                    font-weight: 400;
+                }
+        
+                &.active {
+                    border-bottom: 2px solid black;
+                }
+                
+                span.link-name {
+                    font-size: 0.75rem;
+                    span {
+                        margin-right: 0.125rem;
+                    }
+                }
+                & > svg {
+                    font-size: 1.25rem;    
+                }
+            }
+            a {
+                @include allmixin.flex-container-col;
+                @include allmixin.flex-center;
+        
+                height: 100%;
+                justify-content: center;
+                min-width: 5em;
+                text-decoration: none;
+                color: rgba(0,0,0, 0.5);
+                transition: color 100ms ease-in-out, font-weight 100ms ease-in-out;
+        
+                &:hover, &.active {
+                    color: rgba(0,0,0, 1);
+                    font-weight: 400;
+                }
+        
+                &.active {
+                    border-bottom: 2px solid black;
+                }
+                
+                span.link-name {
+                    font-size: 0.75rem;
+                    span {
+                        margin-right: 0.125rem;
+                    }
+                }
+                & > svg {
+                    font-size: 1.25rem;
+                    transform: scale(1);
+                    transition: transform 100ms ease-in-out;
+                }
+        
+                &:active {
+                    & > svg {    
+                       transform: scale(0.8);
+                    }
+                }
+            }
+        
+        }
+    }
+}
+

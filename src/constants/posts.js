@@ -6,11 +6,10 @@ export const POSTS = [
       profileImg: 'https://source.unsplash.com/random/300x300?profile',
       type: 'post',
       postedAt: '2d',
-      subtitle: 'Follow me for system design & book-writing tips | Author of System Design Interval how are you there',
-      contentText: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-      when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-      It has survived not only five centuries.`,
+      subtitle: 'Professional Photographer | graphics designer',
+      contentText: `“Taking pictures is savoring life intensely, every hundredth of a second.” 
+      “Your first 1,000 photographs are your worst.” 
+      “The best thing about a picture is that it never changes, even when the people in it do.”`,
       following: true,
       postPrivacy: 'public',
       image: `https://source.unsplash.com/random/airplane`,
@@ -40,15 +39,14 @@ export const POSTS = [
       profileImg: 'https://source.unsplash.com/random/300x300?profile',
       type: 'post',
       postedAt: '4d',
-      subtitle: 'Follow me for system design & book-writing tips | Author of System Design Interval how are you there',
-      contentText: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-      when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-      It has survived not only five centuries.`,
+      subtitle: 'Data Scientist | Data Engineering',
+      contentText: `You can learn DSA for free from websites like W3Schools, GeeksforGeeks, Freecodecamp and many more. 
+      You can also learn from courses which you can buy from linkedin premium`,
       following: false,
       postPrivacy: 'public',
       image: null,
       video: null,
+      file: 'https://www.cs.bham.ac.uk/~jxb/DSA/dsa.pdf',
       reacted: {
         liked: true,
       },
@@ -70,8 +68,12 @@ export const POSTS = [
       type: 'post',
       postedAt: '7d',
       subtitle: 'Author || TedX Speaker',
-      contentText: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.`,
+      contentText: `In the spirit of ideas worth spreading, TED has created a program called TEDx. 
+      TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. 
+      Our event is called TEDxLarnaca, where x = independently organized TED event. 
+      At our TEDxLarnaca event, TED Talks video and live speakers will combine to spark deep discussion and connection in a small group. 
+      The TED Conference provides general guidance for the TEDx program, but individual TEDx events, 
+      including ours, are self-organized.`,
       following: false,
       postPrivacy: 'public',
       image: null,
@@ -97,10 +99,12 @@ export const POSTS = [
       type: 'post',
       postedAt: '1h',
       subtitle: 'Devops Engineer @Microsoft',
-      contentText: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-      when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-      It has survived not only five centuries.`,
+      contentText: `Infrastructure as Code (IaC) is an important part of Cloud Applications. 
+      Developers rely on various Static Application Security Testing (SAST) tools to identify 
+      security/compliance issues and mitigate these issues early on, 
+      before releasing their applications to production. Additionally, 
+      SAST tools often provide reporting mechanisms that can help developers verify compliance during security reviews. 
+      cdk-nag integrates`,
       following: false,
       postPrivacy: 'public',
       image: null,
@@ -126,7 +130,7 @@ export const POSTS = [
       type: 'post',
       postedAt: '7h',
       subtitle: 'Making web development easy',
-      contentText: 'Learn css flexbox quickly, by web dev simplified',
+      contentText: 'Learn CSS flexbox quickly, by Web Dev Simplified',
       following: true,
       postPrivacy: 'public',
       image: null,
@@ -152,7 +156,7 @@ export const POSTS = [
       type: 'post',
       postedAt: '7h',
       subtitle: 'HR Manager || Hiring Tech Talent',
-      contentText: 'My sweet dog, running',
+      contentText: 'Our dogs day out! Looking forward to this day!',
       following: true,
       postPrivacy: 'public',
       image: 'https://source.unsplash.com/random/700x600?dogs',

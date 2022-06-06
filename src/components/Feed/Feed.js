@@ -5,22 +5,19 @@ import FeedPost from './FeedPost';
 import StartAPost from '../Main/Post/StartAPost';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { GET_POSTS } from '../../redux/ducks/posts';
+import { getPosts } from '../../redux/ducks/posts';
 
 import './Feed.scss';
 
 function Feed() {
   useDocumentTitle('LinkedIn | Feed');
   const dispatch = useDispatch();
-
-  // const [posts, setPosts] = useState([]);
-
-  const getPosts = useCallback(() => dispatch({type: GET_POSTS}), [dispatch]);
+  const getPostsCb = useCallback(() => dispatch(getPosts()), [dispatch]);
   const posts = useSelector(state => state.posts.posts);
 
   useEffect(() => {
-    getPosts();
-  }, [getPosts])
+    getPostsCb();
+  }, [getPostsCb])
   
   return (
     <div>
