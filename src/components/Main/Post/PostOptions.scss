@@ -29,3 +29,19 @@
         }
     }
 }
+
+@media screen and (max-width: 480px) {
+    .options-container  {
+        button {
+
+            &.item-container  {
+                padding: 0.5rem 0.5rem;
+                span {
+                    margin-left: 0.5rem;
+                    white-space: nowrap;
+                }
+            }
+        }
+        
+    }    
+}

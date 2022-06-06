@@ -17,3 +17,19 @@ section.middle-pane {
 section.right-pane {
     width: 25%;
 }
+
+@media screen and (max-width: 480px) {
+    main.feed-page {
+        padding: 4rem 0rem;
+    }
+
+    section {
+        &.left-pane, &.right-pane, &.messages {
+            display: none;
+        }
+
+        &.middle-pane {
+            width: 100%;
+        }
+    }
+}

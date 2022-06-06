@@ -256,3 +256,38 @@ section.create-post {
         }
     }
 }
+
+
+@media screen and (max-width: 480px) {
+    section {
+        .main-actions {
+            .privacy-chosen {
+                .privacy-option {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+
+      &.create-post {
+        min-width: 0px;
+        width: 96%;
+
+        div.content {
+            padding: 1rem 0.5rem;
+            .action-container {
+                .upload-actions {
+                    width: 60%;
+                    overflow-x: scroll;
+                }
+            }
+        }
+
+        div.header {
+            padding: 1rem 0.5rem;
+        }
+      }
+    }
+}

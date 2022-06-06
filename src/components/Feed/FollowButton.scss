@@ -5,13 +5,14 @@ button {
         position: absolute;
         right: 0;
         top: 10%;
-        background: transparent;
+        background: white;
         border: none;
         border-radius: 6px;
         padding: 0.5rem;
         color: variables.$main-color;
         font-size: 1rem;
         font-weight: 600;
+
 
         svg {
             margin-right: 0.25rem;
