@@ -17,7 +17,7 @@ function Engagements({ data }) {
                     { insightful > 0 ? <img src={ENGAGEMENTS.Insightful} alt='Insightful' /> : null }
                     { curious > 0 ? <img src={ENGAGEMENTS.Curious} alt='Curious' /> : null }
                 </span>
-                <span>{totalInteractions}</span>
+                <span>{totalInteractions} reacted to this</span>
             </>
         }
     </div>
