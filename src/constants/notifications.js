@@ -1,0 +1,3 @@
+const notificationTypes = {
+    viewed: 'VIEWED'
+}

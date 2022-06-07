@@ -1,3 +1,5 @@
+import { v4 } from 'uuid';
+
 export const USER_DETAILS = {
     username: 'John Doe',
     email: 'johndoe@example.com',
@@ -9,7 +11,8 @@ export const USER_DETAILS = {
     profileViewed: 344,
     postImpressions: 698,
     premiumUser: true,
-    bookmarks: []
+    bookmarks: [],
+    id: v4(),
 }
 
 export const LOGIN_USER = {

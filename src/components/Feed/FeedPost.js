@@ -18,7 +18,7 @@ function FeedPost({ data }) {
         <div className='creator'>
             <AuthorProfile profileImg={data.profileImg} />
             <div className='creator-details'>
-                <CreatorTitle author={data.author} following={data.following} />
+                <CreatorTitle author={data.author} following={data.following} authorId={data.authorId} />
                 <Subtitle subtitle={data.subtitle} />
                 <Timeline postedAt={data.postedAt} />
             </div>

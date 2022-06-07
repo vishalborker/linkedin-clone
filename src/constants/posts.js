@@ -1,6 +1,7 @@
+import { v4 } from 'uuid';
 export const POSTS = [
     {
-      id: 1,
+      id: v4(),
       author: 'Gerard Butler',
       authorId: 1,
       profileImg: 'https://source.unsplash.com/random/300x300?profile',
@@ -33,7 +34,7 @@ export const POSTS = [
       ],
       shares: 14
     }, {
-      id: 2,
+      id: v4(),
       author: 'Jim Parsley',
       authorId: 2,
       profileImg: 'https://source.unsplash.com/random/300x300?profile',
@@ -61,7 +62,7 @@ export const POSTS = [
       comments: [],
       shares: 44
     }, {
-      id: 3,
+      id: v4(),
       author: 'John Krasinki',
       authorId: 3,
       profileImg: 'https://source.unsplash.com/random/300x300?profile',
@@ -92,7 +93,7 @@ export const POSTS = [
       comments: [],
       shares: 0
     }, {
-      id: 4,
+      id: v4(),
       author: 'Priya Tendulkar',
       authorId: 4,
       profileImg: 'https://source.unsplash.com/random/300x300?profile',
@@ -123,7 +124,7 @@ export const POSTS = [
       comments: [],
       shares: 0
     }, {
-      id: 5,
+      id: v4(),
       author: 'Web Dev Simplified',
       authorId: 8,
       profileImg: 'https://source.unsplash.com/random/300x300?profile',
@@ -149,7 +150,7 @@ export const POSTS = [
       comments: [],
       shares: 1
     }, {
-      id: 6,
+      id: v4(),
       author: 'John Krasinki',
       authorId: 3,
       profileImg: 'https://source.unsplash.com/random/300x300?profile',

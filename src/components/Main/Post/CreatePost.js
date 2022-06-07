@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { v4 } from 'uuid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { faBriefcase, faCaretDown, faCertificate, faChartSimple, 
     faClose, faCommentDots, faEarthAmerica, faEllipsis, 
@@ -8,11 +9,32 @@ import { faBriefcase, faCaretDown, faCertificate, faChartSimple,
 } from '@fortawesome/free-solid-svg-icons';
 
 import './CreatePost.scss';
+import { createPost } from '../../../redux/ducks/posts';
+import { NEW_POST_FIELDS } from '../../../constants/newPostFields';
 
 function CreatePost({ closeCreatePost }) {
   const user = useSelector(state => state.user.user);
+  const dispatch = useDispatch();
 
   const [postText, setPostText] = useState('');
+
+  const getRequestBody = (post) => {
+    const newPost = {
+        ...NEW_POST_FIELDS,
+        id: v4(),
+        postedAt: '1m',
+        contentText: post,
+        image: null,
+        video: null,
+    };
+    return newPost;
+  }
+
+  const create = (e) => {
+    const newPost = getRequestBody(postText);
+    dispatch(createPost(newPost));
+    closeCreatePost();
+  }
 
   return (
     <>
@@ -84,7 +106,7 @@ function CreatePost({ closeCreatePost }) {
                                 <FontAwesomeIcon icon={faCommentDots} />
                                 <span>Anyone</span>
                             </span>
-                            <button disabled={!postText} className='post-button'>Post</button>
+                            <button disabled={!postText} className='post-button' onClick={(e) => create(e)}>Post</button>
                         </div>
                     </div>
                 </div>
