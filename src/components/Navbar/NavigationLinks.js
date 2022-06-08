@@ -14,7 +14,7 @@ function NavigationLinks({ links }) {
   const [showProfileDropdown, setShowProfileDropdown] = useState(false);
 
   return (
-    <div className='nav-links'>
+    <div className='nav-links-login'>
         <ul>
         {
             links.map(navLink => {

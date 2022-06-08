@@ -8,9 +8,5 @@ export function requestGetNews(payload) {
         fetch(`${API_URL}/news`)
         .then(res => res.json())
         .then(data => resolve(data));
-        // resolve([])
-        // setTimeout(() => {
-        //     resolve(NEWS_ITEMS);
-        // }, 400)
     })
 }

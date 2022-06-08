@@ -8,4 +8,4 @@ function useDocumentTitle(documentTitle) {
   return null;
 }
 
-export default useDocumentTitle
+export default useDocumentTitle;

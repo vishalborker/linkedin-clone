@@ -6,6 +6,7 @@ import createSagaMiddleware from 'redux-saga';
 // import all reducers here
 import loginAuthReducer from './ducks/loginAuth';
 import newsReducer from "./ducks/news";
+import { notificationReducer } from "./ducks/notifications";
 import postReducer from "./ducks/posts";
 import userReducer from "./ducks/user";
 
@@ -17,6 +18,7 @@ const reducer = combineReducers({
     user: userReducer,
     news: newsReducer,
     posts: postReducer,
+    notifications: notificationReducer,
 })
 
 const sagaMiddleware = createSagaMiddleware();

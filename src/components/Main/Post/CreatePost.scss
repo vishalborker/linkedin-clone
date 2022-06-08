@@ -87,7 +87,7 @@ section.create-post {
                 transition: background-color 200ms ease-in-out;
                 
                 &:hover {
-                    background-color: rgba(112, 181, 249,0.2)
+                    background-color: variables.$hover-light-blue-bg;
                 }
             }
         }

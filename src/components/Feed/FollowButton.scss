@@ -19,7 +19,7 @@ button {
         }
 
         &:hover {
-            background-color: #eef3f8;
+            background-color: variables.$hover-light-blue-bg;
         }
     }
 }

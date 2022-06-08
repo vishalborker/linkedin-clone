@@ -1,11 +1,11 @@
-import { POSTS } from "../../../constants/posts";
+import { notifications } from "../../../constants/notifications";
 
 // async calls (side effects should happen here, change data store or API endpoints here)
 
-export function requestGetPosts() {
+export function requestGetNotifications() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve(POSTS);
+            resolve(notifications);
         }, 200)
     })
 }

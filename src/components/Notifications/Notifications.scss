@@ -1,0 +1,41 @@
+@use '../../scss/variables';
+
+section {
+    &.notifications {
+        ul.list {
+            border: 1px solid rgba(0,0,0,0.05);
+            border-radius: 10px;
+            li.list-item {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem;
+                border-bottom: 1px solid rgba(0,0,0,0.05);
+
+                &.read {
+                    background-color: white;
+                }
+
+                &.unread {
+                    background-color: variables.$hover-light-blue-bg;
+                }
+
+                .profile-section {
+                    img {
+                        height: 60px;
+                        width: 60px;
+                        border-radius: 50%;
+                    }
+                }
+
+                .time-and-options {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
