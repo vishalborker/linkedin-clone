@@ -1,7 +1,6 @@
 import React from 'react';
 import { faEllipsis } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { IMAGES } from '../../../constants/images';
 import Loader from '../../helper/Loader';
 
 import './AdCampaign.scss';

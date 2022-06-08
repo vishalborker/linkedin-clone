@@ -4,7 +4,7 @@ import './ViewedProfileNotification.scss';
 
 function ViewedProfileNotification({ author }) {
   return (
-    <div>{author} has viewed your profile</div>
+    <div><b>{author}</b> has viewed your profile</div>
   )
 }
 
