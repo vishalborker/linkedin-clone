@@ -1,70 +1,52 @@
 @use '../../scss/variables';
+@use '../../scss/allmixin';
 
-section {
-    &.notifications {
-        ul.list {
-            border: 1px solid rgba(0,0,0,0.05);
-            border-radius: 10px;
-            li.list-item {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-                padding: 1rem;
-                border-bottom: 1px solid rgba(0,0,0,0.05);
-                min-width: 6rem;
+main.feed-page {
+    @include allmixin.flex-container-row;
+    justify-content: space-between;
+}
 
-                &.read {
-                    background-color: white;
-                }
+aside {
+    background: white;
+    border-radius: 6px;
+    position: relative;
+    margin-bottom: 1em;
+}
 
-                &.unread {
-                    background-color: variables.$hover-light-blue-bg;
-                }
+.main-feed {
+    margin-top: 1rem;
+}
 
-                .profile-section {
-                    width: 10%;
-                    img {
-                        height: 50px;
-                        width: 50px;
-                        border-radius: 50%;
-                    }
-                }
+main.feed-page {
+    padding: 5rem 4rem;
+    background-color: variables.$main-bg;
+    min-height: 100vh;
+}
 
-                .main-content {
-                    cursor: pointer;
-                    width: 80%;
+section.left-pane {
+    width: 20%
+}
 
+section.middle-pane {
+    width: 50%;
+}
 
-                    b {
-                        font-weight: 500;
-                    }
-                }
+section.right-pane {
+    width: 25%;
+}
 
-                .time-and-options {
-                    width: 10%;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
+@media screen and (max-width: 480px) {
+    main.feed-page {
+        padding: 4rem 0rem;
+    }
 
-                    span:first-of-type {
-                        font-size: 0.8rem;
-                        color: rgba(0,0,0,0.5);
-                    }
-                    span:last-of-type {
-                        font-size: 1rem;
-                        color: rgba(0,0,0,0.8);
-                        cursor: pointer;
-                        padding: 0.4rem 0.5rem;
+    section {
+        &.left-pane, &.right-pane, &.messages {
+            display: none;
+        }
 
-                        &:hover {
-                            background-color: rgba(0,0,0,0.1);
-                            border-radius: 50%;
-                        }
-                    }
-                }
-            }
+        &.middle-pane {
+            width: 100%;
         }
     }
 }

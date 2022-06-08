@@ -9,6 +9,7 @@ import Loader from '../components/helper/Loader';
 import Landing from '../components/Landing/Landing';
 
 const HomeComponent = React.lazy(() => import('../components/Main/Home'));
+const NotificationsComponent = React.lazy(() => import('../components/Notifications/Notifications'));
 
 function MainRouter() {
   return (
@@ -21,6 +22,15 @@ function MainRouter() {
                     <Landing />
                 </NoLoginRequired>
             }></Route>
+
+            <Route path="/notifications" element={
+                <ProtectedRoute>
+                    <Suspense fallback={<Loader simple={true} />}>
+                        <NotificationsComponent />
+                    </Suspense>
+                </ProtectedRoute>
+            }>
+            </Route>
 
             {/* If Logged In Home Component Routes will be loaded */}
             <Route path="/*" element={

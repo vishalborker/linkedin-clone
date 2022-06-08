@@ -1,0 +1,54 @@
+@use '../../scss/variables';
+
+aside.notification-settings {
+    position: sticky;
+    top: 4rem;
+    // padding: 0.5rem;
+
+
+    .new-notifications {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        padding: 1rem 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h4 {
+            margin: 0;
+            font-weight: 500;
+            
+        }
+        div:last-of-type {
+            margin-top: 0.5rem;
+            color: rgba(0,0,0,0.6);
+            font-weight: 400;
+        }
+    }
+
+    .improve {
+        background: #f9fafb;
+        padding: 1rem 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        div:first-of-type {
+            color: rgba(0,0,0,0.6);
+            font-weight: 400;
+            font-size: 0.9rem;
+        }
+
+        button {
+            border: none;
+            color: variables.$main-color;
+            font-weight: 500;
+            font-size: 1rem;
+            margin-top: 0.25rem;
+            background-color: transparent;
+            cursor: pointer;
+        }
+
+    }
+}

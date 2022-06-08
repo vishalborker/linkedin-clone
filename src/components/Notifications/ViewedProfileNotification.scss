@@ -1,0 +1,26 @@
+@use '../../scss/variables';
+
+.viewed-notification {
+    .see-all-views {
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 0.25rem 0.6rem;
+        text-align: center;
+        border-radius: 6px;
+        width: 8rem;
+        border: 1.5px solid variables.$main-color;
+        height: 80%;
+        background-color: transparent;
+        color: variables.$main-color;
+        transition: color 100ms ease-in-out, background-color 100ms ease-in-out;
+        border-radius: 25px;
+        margin-top: 0.25rem;
+
+        &:hover {
+            box-shadow:inset 0px 0px 0px 1px variables.$main-color;
+            background-color: variables.$hover-light-blue-bg;
+            
+        }
+            
+    }
+}
