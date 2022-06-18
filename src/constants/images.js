@@ -17,6 +17,7 @@ import google from '../images/google-main.png';
 import Like from '../images/Like.svg'
 import Love from '../images/Love.svg';
 import Clap from '../images/Clap.svg';
+import Laugh from '../images/laugh.svg';
 
 import Curious from '../images/curious.svg'
 import Support from '../images/support.svg';
@@ -76,6 +77,7 @@ export const ENGAGEMENTS = {
     MainComment,
     MainShare,
     MainSend,
+    Laugh,
 }
 
 export const LANDING_PAGE_IMAGES = {

@@ -47,8 +47,8 @@ nav {
     nav {
         &.navigation {
             background: white;
-            height: 2.5rem;
-            padding: 0 0;
+            height: 3.5rem;
+            padding: 0 0.5rem;
 
             .logo-search-container {
                 @include allmixin.flex-container-row;
@@ -57,8 +57,8 @@ nav {
                 width: 4rem;
         
                 img {
-                    height: 20px;
-                    width: 20px;
+                    height: 40px;
+                    width: 40px;
                 }
             }
         }

@@ -8,9 +8,7 @@ export const POSTS = [
       type: 'post',
       postedAt: '2d',
       subtitle: 'Professional Photographer | graphics designer',
-      contentText: `“Taking pictures is savoring life intensely, every hundredth of a second.” 
-      “Your first 1,000 photographs are your worst.” 
-      “The best thing about a picture is that it never changes, even when the people in it do.”`,
+      contentText: `“Taking pictures is savoring life intensely, every hundredth of a second.”`,
       following: true,
       postPrivacy: 'public',
       image: `https://source.unsplash.com/random/airplane`,
@@ -20,6 +18,7 @@ export const POSTS = [
       },
       interaction: {
         likes: 5,
+        laugh: 3,
         love: 12,
         support: 44,
         celebrate: 19,
@@ -54,6 +53,7 @@ export const POSTS = [
       interaction: {
         likes: 0,
         love: 1,
+        laugh: 0,
         support: 4,
         celebrate: 9,
         insightful: 2,
@@ -85,6 +85,7 @@ export const POSTS = [
       interaction: {
         likes: 0,
         love: 0,
+        laugh: 23,
         support: 43,
         celebrate: 91,
         insightful: 22,
@@ -116,6 +117,7 @@ export const POSTS = [
       interaction: {
         likes: 0,
         love: 0,
+        laugh: 100,
         support: 0,
         celebrate: 10,
         insightful: 12,
@@ -142,6 +144,7 @@ export const POSTS = [
       interaction: {
         likes: 10451,
         love: 0,
+        laugh: 3,
         support: 43,
         celebrate: 91,
         insightful: 22,
@@ -168,6 +171,7 @@ export const POSTS = [
       interaction: {
         likes: 0,
         love: 0,
+        laugh: 0,
         support: 0,
         celebrate: 0,
         insightful: 0,

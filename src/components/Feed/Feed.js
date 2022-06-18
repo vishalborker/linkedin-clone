@@ -2,6 +2,7 @@ import React, { useCallback, useEffect } from 'react';
 import useDocumentTitle from '../../hooks/useDocumentTitle';
 
 import FeedPost from './FeedPost';
+import AdCampaign from '../Main/Ads/AdCampaign';
 import StartAPost from '../Main/Post/StartAPost';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -14,6 +15,7 @@ function Feed() {
   const dispatch = useDispatch();
   const getPostsCb = useCallback(() => dispatch(getPosts()), [dispatch]);
   const posts = useSelector(state => state.posts.posts);
+  const user = useSelector(state => state.user.user);
 
   useEffect(() => {
     getPostsCb();
@@ -32,6 +34,7 @@ function Feed() {
           })
         }
       </div>
+      <AdCampaign user={user}/>
     </div>
   )
 }
