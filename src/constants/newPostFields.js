@@ -1,4 +1,6 @@
+import { ImageCategory } from "./images";
 import { USER_DETAILS } from "./user";
+
 
 export const NEW_POST_FIELDS = {
     author: USER_DETAILS.username,
@@ -8,7 +10,7 @@ export const NEW_POST_FIELDS = {
     type: 'post',
     following: true,
     postPrivacy: 'public',
-    image: null,
+    image: `https://source.unsplash.com/random/400x400?${ImageCategory[Math.floor(Math.random() * ImageCategory.length)]}`,
     video: null,
     reacted: {
       liked: false,
@@ -19,7 +21,8 @@ export const NEW_POST_FIELDS = {
       support: 0,
       celebrate: 0,
       insightful: 0,
-      curious: 0
+      curious: 0,
+      laugh: 0,
     },
     comments: [],
     shares: 0

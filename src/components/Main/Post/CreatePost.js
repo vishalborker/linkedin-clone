@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { v4 } from 'uuid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useDispatch, useSelector } from 'react-redux';
@@ -15,6 +15,7 @@ import { NEW_POST_FIELDS } from '../../../constants/newPostFields';
 function CreatePost({ closeCreatePost }) {
   const user = useSelector(state => state.user.user);
   const dispatch = useDispatch();
+  const postTextRef = useRef();
 
   const [postText, setPostText] = useState('');
 
@@ -24,7 +25,6 @@ function CreatePost({ closeCreatePost }) {
         id: v4(),
         postedAt: '1m',
         contentText: post,
-        image: null,
         video: null,
     };
     return newPost;
@@ -35,6 +35,10 @@ function CreatePost({ closeCreatePost }) {
     dispatch(createPost(newPost));
     closeCreatePost();
   }
+
+  useEffect(() => {
+    postTextRef.current.focus();
+  })
 
   return (
     <>
@@ -60,6 +64,7 @@ function CreatePost({ closeCreatePost }) {
 
                 <div className='edit-area'>
                     <textarea placeholder='What do want to talk about?'
+                       ref={postTextRef}
                        className='post-text' value={postText}
                        onChange={(e) => setPostText(e.target.value)}
                     >

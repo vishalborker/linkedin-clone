@@ -1,4 +1,5 @@
 import { v4 } from 'uuid';
+import { ImageCategory } from './images';
 export const POSTS = [
     {
       id: v4(),
@@ -11,7 +12,7 @@ export const POSTS = [
       contentText: `“Taking pictures is savoring life intensely, every hundredth of a second.”`,
       following: true,
       postPrivacy: 'public',
-      image: `https://source.unsplash.com/random/airplane`,
+      image: `https://source.unsplash.com/400x600?${ImageCategory[Math.floor(Math.random() * ImageCategory.length)]}`,
       video: null,
       reacted: {
         liked: true,
@@ -179,5 +180,65 @@ export const POSTS = [
       },
       comments: [],
       shares: 200
+    }, {
+      id: v4(),
+      author: 'Amy Li',
+      authorId: 13,
+      profileImg: 'https://source.unsplash.com/random/300x300?profile',
+      type: 'post',
+      postedAt: '16h',
+      subtitle: 'She/Her',
+      contentText: 'Reading this amazing book today!!!',
+      following: false,
+      postPrivacy: 'public',
+      image: `https://source.unsplash.com/random/700x600?books`,
+      video: null,
+      reacted: {
+        liked: true,
+      },
+      interaction: {
+        likes: 41,
+        love: 0,
+        laugh: 66,
+        support: 188,
+        celebrate: 0,
+        insightful: 4765,
+        curious: 1999
+      },
+      comments: [],
+      shares: 200
+    },
+    {
+      id: v4(),
+      author: 'Gerard Butler',
+      authorId: 1,
+      profileImg: 'https://source.unsplash.com/random/300x300?profile',
+      type: 'post',
+      postedAt: '5d',
+      subtitle: 'Professional Photographer | graphics designer',
+      contentText: 'Posting a random picture from the previous year',
+      following: true,
+      postPrivacy: 'public',
+      image: `https://source.unsplash.com/400x600?${ImageCategory[Math.floor(Math.random() * ImageCategory.length)]}`,
+      video: null,
+      reacted: {
+        liked: true,
+      },
+      interaction: {
+        likes: 52,
+        laugh: 333,
+        love: 122,
+        support: 144,
+        celebrate: 19,
+        insightful: 12,
+        curious: 101
+      },
+      comments: [
+        {
+          author: 'Tom Cruise',
+          text: 'Final comment'
+        }
+      ],
+      shares: 14
     }
   ]

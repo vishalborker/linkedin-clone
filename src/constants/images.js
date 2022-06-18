@@ -93,3 +93,9 @@ export const LANDING_PAGE_IMAGES = {
     LEARN_SKILLS: onLaptop,
 }
 
+export const ImageCategory = [
+    'waterfall', 'animals', 'science', 
+    'books', 'chocolates', 'fruits',
+    'movies', 'celebrities',
+    'forest', 'cover'
+]
