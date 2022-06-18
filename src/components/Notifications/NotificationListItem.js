@@ -2,11 +2,11 @@ import { faEllipsis } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { notificationTypes } from '../../constants/notifications';
-import LiveNotification from './LiveNotification';
+import LiveNotification from './types/LiveNotification';
 
 import './NotificationListItem.scss';
-import SharedPostNotification from './SharedPostNotification';
-import ViewedProfileNotification from './ViewedProfileNotification';
+import SharedPostNotification from './types/SharedPostNotification';
+import ViewedProfileNotification from './types/ViewedProfileNotification';
 
 
 function NotificationListItem({ notification }) {

@@ -14,7 +14,7 @@ import Timeline from './Timeline';
 
 function FeedPost({ data }) {
   return (
-    <div className='content-container'>
+    <article className='content-container'>
         <div className='creator'>
             <AuthorProfile profileImg={data.profileImg} />
             <div className='creator-details'>
@@ -35,7 +35,7 @@ function FeedPost({ data }) {
             </div>
             <ActionButton />
         </div>
-    </div>
+    </article>
   )
 }
 

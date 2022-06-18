@@ -1,7 +1,6 @@
 import React from 'react';
 
 // components
-import Navbar from '../Navbar/Navbar';
 import Copyright from '../Footer/Copyright';
 import ProfileInfo from './Profile/ProfileInfo';
 import Recent from './Recent/Recent';
@@ -19,6 +18,7 @@ import './Home.scss';
 import useUser from '../../hooks/useUser';
 import Loader from '../helper/Loader';
 import Message from '../Messages/Message';
+import MainLayout from '../MainLayout';
 
 function Home() {
   // setUser happens in Home
@@ -29,24 +29,25 @@ function Home() {
       {
         !userData ? <Loader /> :
         <>
-          <Navbar />
-          <main className='feed-page'>
-            <section className='left-pane'>
-                <ProfileInfo user={userData}/>
-                <Recent />
-            </section>
-            <section className='middle-pane'>
-                <HomeRouter />
-            </section>
-            <section className='right-pane'>
-                <News />
-                <AdCampaign user={userData}/>
-                <Copyright />
-            </section>
-            <section className='messages'>
-              <Message />
-            </section>
-          </main>
+          <MainLayout>
+            <main className='feed-page'>
+              <section className='left-pane'>
+                  <ProfileInfo user={userData}/>
+                  <Recent />
+              </section>
+              <section className='middle-pane'>
+                  <HomeRouter />
+              </section>
+              <section className='right-pane'>
+                  <News />
+                  <AdCampaign user={userData}/>
+                  <Copyright />
+              </section>
+              <section className='messages'>
+                <Message />
+              </section>
+            </main>
+          </MainLayout>
         </>
       }
     </ErrorBoundary>

@@ -16,16 +16,16 @@ function Feed() {
   const getPostsCb = useCallback(() => dispatch(getPosts()), [dispatch]);
   const posts = useSelector(state => state.posts.posts);
   const user = useSelector(state => state.user.user);
+  const MobileDevice = window.innerWidth < 480;
 
   useEffect(() => {
     getPostsCb();
-  }, [getPostsCb])
+  }, [getPostsCb]);
   
   return (
-    <div>
+    <>
       <StartAPost />
-
-      <div className='main-feed'>
+      <section className='main-feed'>
         {
           posts && posts.map(data => {
             return (
@@ -33,9 +33,9 @@ function Feed() {
             )
           })
         }
-      </div>
-      <AdCampaign user={user}/>
-    </div>
+      </section>
+      { posts && MobileDevice && <AdCampaign user={user} /> }
+    </>
   )
 }
 

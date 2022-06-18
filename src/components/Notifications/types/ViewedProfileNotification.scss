@@ -1,4 +1,4 @@
-@use '../../scss/variables';
+@use '../../../scss/variables';
 
 .viewed-notification {
     .see-all-views {
@@ -20,7 +20,6 @@
             box-shadow:inset 0px 0px 0px 1px variables.$main-color;
             background-color: variables.$hover-light-blue-bg;
             
-        }
-            
+        }    
     }
 }

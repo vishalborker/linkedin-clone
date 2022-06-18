@@ -9,7 +9,7 @@ import ProfilePopUp from './ProfilePopUp';
 
 import './NavigationLinks.scss';
 
-function NavigationLinks({ links }) {
+function NavigationLinks({ links, desktop = true }) {
   const user = useSelector(state => state.user.user);
   const [showProfileDropdown, setShowProfileDropdown] = useState(false);
 
@@ -29,7 +29,9 @@ function NavigationLinks({ links }) {
             })
         }
 
-            <li>
+        {
+            desktop === true ? <>
+                            <li>
                 <div className='profile-option' onClick={() => setShowProfileDropdown(show => !show)}>
                     <img src={user.profileImg} alt="User Profile" className='profile-image' />
                     <span className='link-name'>
@@ -53,6 +55,9 @@ function NavigationLinks({ links }) {
                 </span>
                 </NavLink>
             </li>
+            </> : null
+        }
+
     
         </ul>
     </div>
