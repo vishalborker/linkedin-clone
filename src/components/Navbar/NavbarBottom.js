@@ -1,14 +1,14 @@
 import React from 'react';
-import NavigationLinks from './NavigationLinks';
 import { NAVLINKS } from '../../constants/navLinks';
 
 import './NavbarBottom.scss';
+import NavigationLinksBottom from './NavigationLinksBottom';
 
-
+// only shown on mobile device
 function NavbarBottom() {
   return (
     <nav className='navigation-bottom' role='navigation'>
-        <NavigationLinks links={NAVLINKS} desktop={false}/>
+        <NavigationLinksBottom links={NAVLINKS} />
     </nav>
   )
 }

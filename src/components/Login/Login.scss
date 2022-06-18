@@ -5,6 +5,16 @@ main.login-main {
     padding: 2em 3rem;
 }
 
+@media screen and (max-width: 480px) {
+    main.login-main {
+        padding: 2em 2rem;
+    }
+
+    .login-container {
+        margin-top: 2rem;
+    }
+}
+
 main.main {
     @include allmixin.flex-container-row;
 
@@ -79,8 +89,6 @@ main.main {
             font-weight: 500;
             margin: 0.5rem 0;
         }
-
-        
     }
 
     .login-form {

@@ -41,3 +41,13 @@ $font-color: rgba(0,0,0, 0.6);
         }
     }
 }
+
+@media screen and (max-width: 480px) {
+    .post-container {
+        .create-container {
+            button {
+                width: 85%;
+            }
+        }
+    }
+}

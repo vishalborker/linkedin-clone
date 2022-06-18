@@ -19,13 +19,6 @@
         width: 14rem;
         transition: width 300ms ease-in-out, font-size 300ms ease-in-out;
         padding-left: 0.5rem;
-
-        @media screen and (min-width: 480px) {            
-            &:focus {
-                width: 18em;
-                font-size: 1rem;
-            }
-        }
     }
 
     .search-bar {
@@ -34,6 +27,13 @@
     }
 }
 
-@media screen and (max-width: 480px) {
-    
+@media screen and (min-width: 480px) {            
+    .search-container {
+        input[type="text"] {
+            &:focus {
+                width: 18em;
+                font-size: 1rem;
+            }
+        }
+    }
 }

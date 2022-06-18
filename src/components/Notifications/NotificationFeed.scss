@@ -69,3 +69,17 @@ div {
         }
     }
 }
+
+@media screen and (max-width: 480px) {
+    div {
+        &.notifications {
+            ul.list {
+                li.list-item {
+                    .profile-section {
+                        width: 15%;
+                    }
+                }
+           }
+        }
+    }
+}
