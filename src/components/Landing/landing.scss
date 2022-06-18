@@ -9,8 +9,9 @@
     --color-background-canvas-dark: #000000;
     --color-text-dark: #8f5849;
 }
-main.landing {
 
+
+main.landing {
     section.social {
         padding: 4rem 3.5rem;
         background-color: var(--color-background-canvas-tint);
@@ -482,4 +483,8 @@ nav {
             }
         }
     }
+}
+
+@media screen and (max-width) {
+    
 }
