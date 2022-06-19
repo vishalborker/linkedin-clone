@@ -9,6 +9,7 @@ import { IMAGES } from '../../../constants/images';
 import { GET_NEWS } from '../../../redux/ducks/news';
 
 import './News.scss';
+import Loader from '../../helper/Loader';
 
 function News() {
   const dispatch = useDispatch();
@@ -31,6 +32,7 @@ function News() {
         </div>
         <div className='news-container'>
           <ul>
+            { !newsItems ? <Loader simple={true} /> : null }
             {
 
               newsItems &&

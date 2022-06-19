@@ -1,8 +1,9 @@
-import React, { useCallback, useEffect } from 'react'
+import React, { useCallback, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { getNotifications } from '../../redux/ducks/notifications';
 import NotificationListItem from './NotificationListItem';
+import Loader from '../helper/Loader';
 
 import './NotificationFeed.scss';
 
@@ -10,6 +11,7 @@ function NotificationFeed() {
     const dispatch = useDispatch();
     const notificationsCb = useCallback(() => dispatch(getNotifications()), [dispatch]);
     const notifications = useSelector(state => state.notifications.notifications);
+    
     useEffect(() => {
         notificationsCb();
     }, [notificationsCb])
@@ -17,6 +19,7 @@ function NotificationFeed() {
     return (
         <div className='notifications'>
             <ul className='list'>
+            { !notifications ? <Loader simple={true} /> : null }
             {
                 notifications && notifications.map((notification, index) => {
                 return (
@@ -30,4 +33,4 @@ function NotificationFeed() {
     )
 }
 
-export default NotificationFeed
+export default NotificationFeed;

@@ -15,7 +15,8 @@ import NotificationSettings from './NotificationSettings';
 function Notifications() {
   useDocumentTitle('LinkedIN | Notifications');
   const [ userData ] = useUser();
-  console.log({userData})
+
+  if (!userData) return null;
 
   return (
     <ErrorBoundary>

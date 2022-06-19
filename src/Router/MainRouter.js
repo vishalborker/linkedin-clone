@@ -23,7 +23,7 @@ function MainRouter() {
                 </NoLoginRequired>
             }></Route>
 
-            <Route path="/notifications" element={
+            <Route path="/notifications/*" element={
                 <ProtectedRoute>
                     <Suspense fallback={<Loader simple={true} />}>
                         <NotificationsComponent />
