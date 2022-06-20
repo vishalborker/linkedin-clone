@@ -18,6 +18,26 @@ section.right-pane {
     width: 25%;
 }
 
+@media screen and (min-width:480px) and (max-width:1024px) {
+    main.feed-page {
+        padding: 5rem 1rem;
+        background-color: variables.$main-bg;
+        min-height: 100vh;
+    }
+    
+    section.left-pane {
+        width: 20%
+    }
+    
+    section.middle-pane {
+        width: 50%;
+    }
+    
+    section.right-pane {
+        width: 25%;
+    }
+}
+
 @media screen and (max-width: 480px) {
     main.feed-page {
         padding: 4rem 0rem;

@@ -3,14 +3,15 @@ import { v4 } from 'uuid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { faBriefcase, faCaretDown, faCertificate, faChartSimple, 
-    faClose, faCommentDots, faEarthAmerica, faEllipsis, 
-    faFileLines, faImage, faVideo 
+import { faCaretDown, 
+    faClose, faCommentDots, faEarthAmerica
 } from '@fortawesome/free-solid-svg-icons';
 
 import './CreatePost.scss';
 import { createPost } from '../../../redux/ducks/posts';
 import { NEW_POST_FIELDS } from '../../../constants/newPostFields';
+import UploadOptions from './UploadOptions';
+import AddHashtag from './AddHashtag';
 
 function CreatePost({ closeCreatePost }) {
   const user = useSelector(state => state.user.user);
@@ -18,6 +19,7 @@ function CreatePost({ closeCreatePost }) {
   const postTextRef = useRef();
 
   const [postText, setPostText] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const getRequestBody = (post) => {
     const newPost = {
@@ -31,9 +33,14 @@ function CreatePost({ closeCreatePost }) {
   }
 
   const create = (e) => {
+    setLoading(true);
     const newPost = getRequestBody(postText);
+
     dispatch(createPost(newPost));
-    closeCreatePost();
+
+    setTimeout(() => {
+        closeCreatePost();
+    }, 1000);
   }
 
   useEffect(() => {
@@ -57,7 +64,6 @@ function CreatePost({ closeCreatePost }) {
                             <FontAwesomeIcon icon={faEarthAmerica} />
                             <span>Anyone</span>
                             <FontAwesomeIcon icon={faCaretDown} />
-
                         </div>
                     </div>
                 </div>
@@ -68,50 +74,20 @@ function CreatePost({ closeCreatePost }) {
                        className='post-text' value={postText}
                        onChange={(e) => setPostText(e.target.value)}
                     >
-
                     </textarea>
                 </div>
-
-                <div className='add-hashtag-container'>
-                    <button className='hashtag'>Add hashtag</button>
-                </div>
+                <AddHashtag />
                 <div className='action-container'>
-                    <div className='upload-actions'>
-                        <button className='action-button image' data-tooltip='Add a photo'>
-                            <FontAwesomeIcon icon={faImage} />
-                        </button>
-
-                        <button className='video action-button' data-tooltip='Add a video'>
-                            <FontAwesomeIcon icon={faVideo} />
-                        </button>
-
-                        <button className='document action-button' data-tooltip='Add a document'>
-                            <FontAwesomeIcon icon={faFileLines} />
-                        </button>
-
-                        <button className='hiring action-button' data-tooltip={`Share that you're hiring`}>
-                            <FontAwesomeIcon icon={faBriefcase} />
-                        </button>
-
-                        <button className='celebrate action-button' data-tooltip='Celebrate a occassion'>
-                            <FontAwesomeIcon icon={faCertificate} />
-                        </button>
-
-                        <button className='create-poll action-button' data-tooltip='Create a poll'>
-                            <FontAwesomeIcon icon={faChartSimple} />
-                        </button>
-
-                        <button className='add-this action-button' data-tooltip='Add to your post'>
-                            <FontAwesomeIcon icon={faEllipsis} />
-                        </button>
-                    </div>
+                    <UploadOptions />
                     <div className='main-actions'>
                         <div className='privacy-chosen'>
                             <span className='privacy-option'>
                                 <FontAwesomeIcon icon={faCommentDots} />
                                 <span>Anyone</span>
                             </span>
-                            <button disabled={!postText} className='post-button' onClick={(e) => create(e)}>Post</button>
+                            <button disabled={!postText || loading} className='post-button' onClick={(e) => create(e)}>
+                                Post
+                            </button>
                         </div>
                     </div>
                 </div>

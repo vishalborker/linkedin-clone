@@ -17,19 +17,23 @@ function NotificationFeed() {
     }, [notificationsCb])
 
     return (
-        <div className='notifications'>
-            <ul className='list'>
-            { !notifications ? <Loader simple={true} /> : null }
-            {
-                notifications && notifications.map((notification, index) => {
-                return (
-                    <li key={index} className={`list-item ${notification.read ? 'read' : 'unread'}`}>
-                        <NotificationListItem notification={notification}/>
-                    </li>)
-                })
+        <>        
+            { 
+            !notifications ? <Loader simple={true} center={true} /> :
+            <div className='notifications'>
+                <ul className='list'>
+                {
+                    notifications && notifications.map((notification, index) => {
+                    return (
+                        <li key={index} className={`list-item ${notification.read ? 'read' : 'unread'}`}>
+                            <NotificationListItem notification={notification}/>
+                        </li>)
+                    })
+                }
+                </ul>
+            </div>
             }
-            </ul>
-        </div>
+        </>
     )
 }
 

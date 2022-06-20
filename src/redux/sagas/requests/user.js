@@ -6,6 +6,6 @@ export function requestGetUser(payload) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(USER_DETAILS);
-        }, 200)
+        }, 700);
     })
 }

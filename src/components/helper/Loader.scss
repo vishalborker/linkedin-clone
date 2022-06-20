@@ -4,10 +4,8 @@
   align-items: center;
   height: 100vh;
   
-  .loader2 {
-    margin-left: 0.15rem;
-    // margin: 0 auto;
-    
+  .loader {
+    margin-left: 0.15rem;    
     border: 2px solid #f3f3f3;
     border-radius: 50%;
     border-top: 2px solid #3498db;
@@ -18,7 +16,7 @@
 }
 
 .loader {
-  margin: 0 auto;
+  margin-left: 0.5rem;
   border: 2px solid #f3f3f3;
   border-radius: 50%;
   border-top: 2px solid #3498db;
@@ -26,6 +24,15 @@
   height: 1rem;
   animation: spin 2s linear infinite;
 }
+
+.loader.center {
+  margin: 0 auto;
+  margin-top: 2rem;
+  width: 2rem;
+  height: 2rem;
+  border-top: 2px solid #3498db;
+}
+
   
 /* Safari */
 @-webkit-keyframes spin {
