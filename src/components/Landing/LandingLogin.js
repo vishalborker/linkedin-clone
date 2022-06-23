@@ -22,6 +22,7 @@ function LandingLogin() {
 
   const loginSubmit = (e) => {
     e.preventDefault();
+    navigator.vibrate(200);
     setLoading(true);
 
     const reqBody = {
