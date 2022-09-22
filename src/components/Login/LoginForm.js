@@ -28,7 +28,7 @@ function LoginForm() {
 
   const loginSubmit = (e) => {
     e.preventDefault();
-    navigator.vibrate(200);
+    // navigator.vibrate(200);
     setLoading(true);
 
     const reqBody = {
