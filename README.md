@@ -68,3 +68,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+node-compatibility with node-sass
+https://stackoverflow.com/questions/70281346/node-js-sass-version-7-0-0-is-incompatible-with-4-0-0-5-0-0-6-0-0

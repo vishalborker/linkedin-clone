@@ -14,7 +14,7 @@ export const NAVLINKS = [{
         faIcon: faHome
     }, {
         key: 'My Network',
-        href: '/network',
+        href: '/mynetwork',
         faIcon: faUserGroup
     }, {
         key: 'Jobs',

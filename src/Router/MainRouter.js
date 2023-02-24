@@ -11,6 +11,8 @@ import Landing from '../components/Landing/Landing';
 const HomeComponent = React.lazy(() => import('../components/Main/Home'));
 const NotificationsComponent = React.lazy(() => import('../components/Notifications/Notifications'));
 
+const MyNetworkComponent = React.lazy(() => import('../components/MyNetwork/MyNetwork'));
+
 function MainRouter() {
   return (
     <BrowserRouter>
@@ -31,6 +33,16 @@ function MainRouter() {
                 </ProtectedRoute>
             }>
             </Route>
+
+            <Route path="/mynetwork/*" element= {
+                <ProtectedRoute>
+                    <Suspense fallback={<Loader simple={true} />}>
+                        <MyNetworkComponent />
+                    </Suspense>
+                </ProtectedRoute>
+            }>
+            </Route>
+
 
             {/* If Logged In Home Component Routes will be loaded */}
             <Route path="/*" element={
